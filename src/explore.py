@@ -17,20 +17,17 @@ from pathlib import Path
 
 TRANSCRIPTS_DIR = Path(__file__).resolve().parent.parent / "transcripts"
 
-# Each turn in a file looks like this (header line, then one line of speech):
+#Every turn
 #   00:00:25 Speaker D
-#   Yes. Um my name is Dirk ...
+#   Speech line
 TURN_HEADER = re.compile(r"^(\d\d:\d\d:\d\d) Speaker ([A-D])$")
 
-# Filler words. We only COUNT them here, we never delete them, because the
-# graders check quotes word for word against the original text.
+#Count the noise only
 FILLERS = {"um", "uh", "hmm", "mm", "mm-hmm", "uh-huh", "yeah", "okay"}
 
-# OpenAI models use roughly 1.3 tokens per English word. The task sheet says
-# ~676k words = ~880k tokens, which matches. If the `tiktoken` package is
-# installed we count exactly instead of estimating.
+
 try:
-    import tiktoken
+    import tiktoken #token counter
     _enc = tiktoken.get_encoding("o200k_base")
     def count_tokens(text: str) -> int:
         return len(_enc.encode(text))
@@ -40,7 +37,7 @@ except Exception:
         return round(len(text.split()) * 1.3)
     TOKEN_METHOD = "estimated (words x 1.3)"
 
-
+#turn each transcript file into a list of dictionaries (one per turn)
 def parse_turns(path: Path) -> list[dict]:
     """Return a list of turns: {time, speaker, text}."""
     lines = path.read_text(encoding="utf-8").splitlines()
@@ -134,3 +131,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
