@@ -1,0 +1,158 @@
+{
+  "title": "Catalist Agentic AI Intern build test: meeting memory",
+  "source": "AMI Meeting Corpus, CC BY 4.0 (https://groups.inf.ed.ac.uk/ami/corpus/). 138 meetings from 35 design teams; each team met up to four times (meetings a, b, c, d) to design a TV remote control.",
+  "instructions": [
+    "Build a system that turns the transcripts in transcripts/ into memory you can query: decisions and how they change over time, who said what, commitments and whether they were followed up, and numbers.",
+    "The corpus is about 676,000 words (roughly 880,000 tokens). Pasting it all into one prompt is not the intended solution: your system has to find the right meetings and passages itself.",
+    "Every question needs at least two meetings of the named team. Answer each one in one to three plain sentences.",
+    "Speakers are labelled by letter (Speaker A, B, C, D) exactly as in each transcript file. Give the letter, and the role too if the transcripts make it clear.",
+    "Back every answer with one to three citations. A citation is a meeting id and a quote of at least six words copied exactly from that transcript, from within one speaker turn. Quotes are checked automatically (case and spacing are ignored); paraphrases fail.",
+    "Also write the brief described in brief_task."
+  ],
+  "submission_format": {
+    "answers": [
+      {
+        "question_id": "Q01",
+        "answer": "...",
+        "citations": [
+          {
+            "meeting_id": "TS3006d",
+            "quote": "at least six words copied exactly from the transcript"
+          }
+        ]
+      }
+    ],
+    "brief": "plain text"
+  },
+  "brief_task": {
+    "team": "TS3012",
+    "instruction": "Write the brief Team TS3012 should read before their final meeting."
+  },
+  "questions": [
+    {
+      "question_id": "Q01",
+      "team": "TS3006",
+      "question": "Team TS3006 planned both an LCD screen and speech recognition. When the costs forced a cut, which of the two did they drop, which did they keep, and what reason was given for keeping it?"
+    },
+    {
+      "question_id": "Q02",
+      "team": "ES2003",
+      "question": "Team ES2003 leaned towards one material for the case and then switched to another. What did they lean towards first, what did they end with, and why did they switch?"
+    },
+    {
+      "question_id": "Q03",
+      "team": "TS3009",
+      "question": "Team TS3009 planned a titanium back for their remote. Who first proposed replacing the titanium, what did they propose instead, and was the titanium kept in the end?"
+    },
+    {
+      "question_id": "Q04",
+      "team": "TS3011",
+      "question": "Team TS3011 chose a combined energy source for their remote. What was the combination, and what happened to it when the costs were added up?"
+    },
+    {
+      "question_id": "Q05",
+      "team": "TS3007",
+      "question": "Team TS3007's energy source changed between meetings. What did they first settle on, what did they end with, and who proposed the change?"
+    },
+    {
+      "question_id": "Q06",
+      "team": "ES2008",
+      "question": "Team ES2008 wanted a feature to stop the remote getting lost. What happened to that feature, who raised the main objection to it, and what was the objection?"
+    },
+    {
+      "question_id": "Q07",
+      "team": "IS1008",
+      "question": "In Team IS1008, a team member was asked to find out what adding a display would cost. Who was it, and what figure did they come back with?"
+    },
+    {
+      "question_id": "Q08",
+      "team": "ES2007",
+      "question": "A health complaint about remote controls came up in Team ES2007's meetings. Who brought it up, what was it, and how did the team's design respond to it?"
+    },
+    {
+      "question_id": "Q09",
+      "team": "IS1002",
+      "question": "What selling price was Team IS1002 working with at first, what price range did they settle on later, and which speaker pushed hardest for a higher, more exclusive price?"
+    },
+    {
+      "question_id": "Q10",
+      "team": "TS3003",
+      "question": "Which age group did Team TS3003 decide to design for, and why that group rather than another?"
+    },
+    {
+      "question_id": "Q11",
+      "team": "ES2011",
+      "question": "Team ES2011's project manager said they would check what one of the new project requirements meant. What was the question, and what was the answer when it came up again?"
+    },
+    {
+      "question_id": "Q12",
+      "team": "ES2004",
+      "question": "Team ES2004 considered voice recognition as a way to find the remote when it is lost. What happened to it in the final design, why, and what did they say would still make the remote easy to find?"
+    },
+    {
+      "question_id": "Q13",
+      "team": "TS3004",
+      "question": "Team TS3004 changed its mind about speech recognition more than once. Was speech recognition in their final design, and in which of their four meetings did they last reverse their position on it?"
+    },
+    {
+      "question_id": "Q14",
+      "team": "IS1009",
+      "question": "Team IS1009 left one feature pending more research into its cost. In their final costing, what total did they reach, and was that feature included in the total?"
+    },
+    {
+      "question_id": "Q15",
+      "team": "ES2016",
+      "question": "Team ES2016's first full costing of their design came out over budget. What total did they get, what was the limit, and which component did they remove to fix it?"
+    },
+    {
+      "question_id": "Q16",
+      "team": "TS3010",
+      "question": "Team TS3010's project manager favoured a particular kind of control for navigating. What was it, what replaced it in the final costed design, and what else was given up at the same time to reach the budget?"
+    },
+    {
+      "question_id": "Q17",
+      "team": "ES2009",
+      "question": "Team ES2009 provisionally chose a touch screen. In which of their meetings was it dropped, what feature did they keep instead, and what cost per remote was estimated for the touch screen?"
+    },
+    {
+      "question_id": "Q18",
+      "team": "ES2014",
+      "question": "How did Team ES2014 first plan to let people find a lost remote, what did that plan change to, and who suggested how the new version should be presented to buyers?"
+    },
+    {
+      "question_id": "Q19",
+      "team": "IS1003",
+      "question": "Team IS1003 picked a natural material for the case and later changed it. What was the material, what replaced it, and who suggested the switch?"
+    },
+    {
+      "question_id": "Q20",
+      "team": "ES2008",
+      "question": "Early on, a Team ES2008 member asked whether the remote should only have buttons for the television. Who said they would look into it, and what answer was reported back?"
+    },
+    {
+      "question_id": "Q21",
+      "team": "IS1007",
+      "question": "In Team IS1007, one member said they would check the prices of components. Who was it, what total did they report for a version with all the functions, and what did the team then decide about the LCD?"
+    },
+    {
+      "question_id": "Q22",
+      "team": "ES2010",
+      "question": "Team ES2010 discussed several battery options. Who suggested a lithium battery, what did another member prefer instead and why, and what was the final choice?"
+    },
+    {
+      "question_id": "Q23",
+      "team": "ES2006",
+      "question": "Team ES2006's final design had to fit the budget. Which of their headline technical features did they keep, and what did they swap out or simplify to get under budget?"
+    },
+    {
+      "question_id": "Q24",
+      "team": "ES2002",
+      "question": "What power source did Team ES2002 first agree on, what addition did their project manager like the idea of, and what did the final design use?"
+    },
+    {
+      "question_id": "Q25",
+      "team": "ES2011",
+      "question": "Team ES2011 played with fruit and vegetable ideas for the look of their remote. What did they decide about fruit and vegetable shapes in the end, and why?"
+    }
+  ]
+}

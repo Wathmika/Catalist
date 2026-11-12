@@ -1,0 +1,1 @@
+Source: AMI Meeting Corpus (University of Edinburgh and partners), released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0). Catalist reformatted the manual transcripts into one file per meeting (speaker letter and start time per turn). The words are as transcribed; non-speech markers are left out.
