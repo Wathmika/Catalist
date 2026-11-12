@@ -1,0 +1,18 @@
+# Secrets: never commit your API key
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated files (rebuilt by the scripts)
+*.db
+*.sqlite
+data/cache/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
