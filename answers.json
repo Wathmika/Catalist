@@ -2,7 +2,7 @@
   "answers": [
     {
       "question_id": "Q01",
-      "answer": "They dropped speech recognition and kept the LCD screen; they said losing the screen would mean needing many extra buttons, and Speaker C (Industrial Designer) added that speech had not really been integrated. Earlier, they had planned to include both features. citeTS3006bTS3006d",
+      "answer": "They dropped speech recognition and kept the LCD screen; they said losing the screen would mean needing many extra buttons, and Speaker C (Industrial Designer) added that speech had not really been integrated. Earlier, they had planned to include both features.",
       "citations": [
         {
           "meeting_id": "TS3006b",
@@ -192,7 +192,7 @@
     },
     {
       "question_id": "Q12",
-      "answer": "They initially considered voice recognition to find the lost remote, but removed it from the base design because of its cost and the budget; it could instead be recommended as an optional business-class upgrade. They said the remote’s distinctive design would itself make it easier to locate. [[ES2004c]] [[ES2004d]]",
+      "answer": "They initially considered voice recognition to find the lost remote, but removed it from the base design because of its cost and the budget; it could instead be recommended as an optional business-class upgrade. They said the remote’s distinctive design would itself make it easier to locate.",
       "citations": [
         {
           "meeting_id": "ES2004c",
@@ -328,7 +328,7 @@
     },
     {
       "question_id": "Q20",
-      "answer": "Speaker A (Project Manager) said they would look into it; the answer reported back in meeting b was that the remote would be just for television, not video or other devices. [ES2008a] [ES2008b]",
+      "answer": "Speaker A (Project Manager) said they would look into it; the answer reported back in meeting b was that the remote would be just for television, not video or other devices.",
       "citations": [
         {
           "meeting_id": "ES2008a",
@@ -396,7 +396,7 @@
     },
     {
       "question_id": "Q24",
-      "answer": "They first agreed to use regular, non-rechargeable batteries. The project manager, Speaker B (Project Manager), liked the idea of adding kinetic power alongside the battery; the final design used battery power only. Citations: [ES2002c] [ES2002d]",
+      "answer": "They first agreed to use regular, non-rechargeable batteries. The project manager, Speaker B (Project Manager), liked the idea of adding kinetic power alongside the battery; the final design used battery power only.",
       "citations": [
         {
           "meeting_id": "ES2002c",

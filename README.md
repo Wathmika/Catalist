@@ -21,11 +21,11 @@ transcripts/*.txt
   ▼
 data/memory.db  data/vectors.db  data/facts.db
   │
-  │  agent.py        tool-calling loop (gpt-4.1-mini): plan_searches (forced first:     [LLM decides,
+  │  agent.py        tool-calling loop (gpt-6-luna): plan_searches (forced first:       [LLM decides,
   │                  code runs one search per part), list_meetings, get_roles,          code executes
   │                  get_memory (dated timeline), search (hybrid), read_turns,          and checks]
   │                  submit_answer -> code checks quotes, roles, format, and outcome
-  │                  claims against memory's current decisions
+  │                  claims against memory's current decisions; strips citation markers
   │  brief.py        same loop, meetings before the final one only (enforced in code)
   ▼
 answers.json  brief_TS3012.md  logs/<question>.json (every step of every answer)
@@ -49,10 +49,13 @@ Create a file `.env` in this folder with one line: `OPENAI_API_KEY=sk-...` (neve
 | 1. Build the store | `python src/store.py` | ~1 s | free |
 | 2. Embeddings | `python src/embed.py` | ~40 s | ~$0.03 |
 | 3. Extract memory | `python src/extract.py --all` | ~11 min | ~$1.03 |
-| 4. Answer the 25 questions | `python src/run_questions.py` | ~2-3 min | ~$0.40 |
-| 5. TS3012 brief | `python src/brief.py` | ~1 min | ~$0.05 |
+| 4. Answer the 25 questions | `python src/run_questions.py` | ~2-3 min | ~$0.12 |
+| 5. TS3012 brief | `python src/brief.py` | ~1 min | ~$0.02 |
 
-Steps 2 and 3 are resumable and never pay twice for the same work.
+Steps 2 and 3 are resumable and never pay twice for the same work. Memory extraction uses
+gpt-4.1-mini; the agent and brief use gpt-6-luna (set `AGENT_MODEL=gpt-4.1-mini` in the
+environment to compare). `python src/run_questions.py --clean` re-applies the answer clean-up
+to an existing answers.json without calling any model.
 
 Ask anything:
 ```
@@ -73,10 +76,15 @@ python src/inspect_data.py show TS3012c 56
 | `python tests/check_quotes.py` | our 10 test questions' citations are real (grader's rules) |
 | `python tests/eval_search.py` | retrieval recall@k: keyword vs vector vs hybrid |
 | `python tests/eval_memory.py` | extracted memory vs 14 TS3012 moments checked by reading |
-| `python tests/eval_agent.py` | agent on our 10 test questions: key facts, citations, cost |
+| `python tests/eval_current.py` | does memory know the FINAL state? 12 hand-checked outcomes (free, deterministic) |
+| `python tests/eval_agent.py` | agent on our 10 development questions: key facts, citations, cost |
+| `python tests/eval_agent.py --heldout` | agent on 6 held-out questions (5 teams no other question set uses) |
+| `python tests/check_quotes.py --heldout` | the held-out set's citations are real |
 
-`tests/my_questions.json` holds 10 questions on 5 teams that are not in Catalist's 25, with answers
-written by reading the transcripts and 30 code-verified citations.
+`tests/my_questions.json` holds 10 questions on 6 teams that are not in Catalist's 25;
+`tests/heldout_questions.json` holds 6 more on the last 5 unused teams. All answers were written by
+reading the transcripts; all 48 citations are code-verified. Key-fact scores come from an LLM judge
+(gpt-4.1-mini) that was checked by reading; see WRITEUP.md for both numbers.
 
 ## Files
 

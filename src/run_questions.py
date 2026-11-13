@@ -3,6 +3,7 @@ Phase 4 - Answer Catalist's 25 questions and write answers.json.
 
     python src/run_questions.py              all 25 questions
     python src/run_questions.py Q01 Q07      only these (merged into the existing answers.json)
+    python src/run_questions.py --clean      no model calls: re-apply clean_answer() to answers.json
 
 Questions run in parallel (they're independent). Each answer is checked by code
 before it is written; a full log per question goes to logs/Qxx.json.
@@ -13,14 +14,30 @@ import json
 import sys
 from concurrent.futures import ThreadPoolExecutor
 
-from agent import MODEL, answer_question
+from agent import MODEL, answer_question, clean_answer
 from parse import ROOT
 
 ANSWERS_PATH = ROOT / "answers.json"
 WORKERS = 4
 
 
+def clean_only() -> None:
+    """Strip citation markers from the answers already in answers.json (deterministic, free).
+    Same function the agent now applies to every new answer."""
+    d = json.loads(ANSWERS_PATH.read_text(encoding="utf-8"))
+    changed = 0
+    for a in d["answers"]:
+        new = clean_answer(a["answer"])
+        if new != a["answer"]:
+            print(f"{a['question_id']}: ...{a['answer'][-60:]!r}\n   -> ...{new[-60:]!r}")
+            a["answer"], changed = new, changed + 1
+    ANSWERS_PATH.write_text(json.dumps(d, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Cleaned {changed} answer(s); citations and brief unchanged.")
+
+
 def main() -> None:
+    if "--clean" in sys.argv:
+        return clean_only()
     data = json.loads((ROOT / "questions.json").read_text(encoding="utf-8"))
     wanted = set(sys.argv[1:])
     questions = [q for q in data["questions"] if not wanted or q["question_id"] in wanted]

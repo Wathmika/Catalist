@@ -204,6 +204,23 @@ def check_outcomes(answer: str, team: str, up_to_meeting: str | None) -> list[st
     return problems[:3]
 
 
+_ID = r"[A-Z]{2}\d{4}[a-d]"
+
+
+def clean_answer(text: str) -> str:
+    """CODE removes citation markers the model writes into the answer text. gpt-6-luna sometimes adds
+    its own markers - hidden private-use characters ("\ue200cite\ue202TS3006b\ue201"), "[[ES2004c]]",
+    "[ES2008a]", "[1][2][3]" or a trailing "Citations: ..." - although citations go in their own field.
+    Catalist asks for plain sentences, so these are stripped by fixed rules (no model involved)."""
+    text = re.sub("\ue200.*?\ue201", "", text)                     # hidden citation spans
+    text = re.sub("[\ue000-\uf8ff]", "", text)                      # any other private-use characters
+    text = re.sub(r"\s*Citations?:\s*(\[+" + _ID + r"\]+[\s,;]*)*$", "", text)
+    text = re.sub(r"\s*\[+" + _ID + r"\]+", "", text)                # [ES2008a], [[ES2004c]]
+    text = re.sub(r"\s*\[\d+\]", "", text)                           # [1][2][3]
+    text = re.sub(r"\s+([.,;:])", r"\1", text)
+    return re.sub(r"\s{2,}", " ", text).strip()
+
+
 def salvage_quotes(answer: str, team: str, up_to_meeting: str | None) -> tuple[list, list]:
     """If the model never filled in citations but quoted the transcript inside its answer, CODE finds
     which meeting each quote is from and checks it with the grader's rules. Only exact (or repaired,
@@ -348,7 +365,7 @@ def answer_question(question: str, team: str, qid: str = "adhoc", model: str | N
             if not good:                           # last resort: rescue quotes written in the answer text
                 good, notes2 = salvage_quotes(answer_text, team, up_to_meeting)
                 trace[-1]["salvaged"] = notes2
-            final = {"answer": args.get("answer", "").strip(), "citations": good,
+            final = {"answer": clean_answer(args.get("answer", "")), "citations": good,
                      "dropped_citations": failures}
             messages.append({"role": "tool", "tool_call_id": call.id, "content": "Accepted."})
         if final:
