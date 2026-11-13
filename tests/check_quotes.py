@@ -7,7 +7,8 @@ Plain code, no AI. Applies the same rules Catalist's grader uses:
   - case and spacing are ignored
 
 Run from the Catalist folder:
-    python tests/check_quotes.py
+    python tests/check_quotes.py              (our 10 development questions)
+    python tests/check_quotes.py --heldout    (the 6 held-out questions)
 """
 
 import json
@@ -26,7 +27,8 @@ def norm(text: str) -> str:
 
 
 def main() -> None:
-    data = json.loads((ROOT / "tests" / "my_questions.json").read_text(encoding="utf-8"))
+    qfile = "heldout_questions.json" if "--heldout" in sys.argv else "my_questions.json"
+    data = json.loads((ROOT / "tests" / qfile).read_text(encoding="utf-8"))
     failures = 0
     for q in data["questions"]:
         for c in q["citations"]:

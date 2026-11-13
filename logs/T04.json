@@ -1,0 +1,199 @@
+{
+  "question_id": "T04",
+  "team": "TS3012",
+  "question": "What case material did Team TS3012 choose and why, and what did they sacrifice to keep it when the costs came in?",
+  "answer": "They chose rubber because it softens falls and makes the remote more durable, with its spongy feel also seen as a good fit. After costs came in, they kept rubber and removed yellow from the basic product, making the special colour an optional extra.",
+  "citations": [
+    {
+      "meeting_id": "TS3012c",
+      "quote": "If it falls it might crack. And rubber uh kind of softens the fall."
+    },
+    {
+      "meeting_id": "TS3012d",
+      "quote": "I'm in favour of keeping the rubber, because it has more more advantages than the colour yellow has."
+    },
+    {
+      "meeting_id": "TS3012d",
+      "quote": "that's an extra option, an extra service we can deliver for a little bit of more money."
+    }
+  ],
+  "dropped_citations": [],
+  "model": "gpt-6-luna",
+  "prompt_version": "a4",
+  "steps": 13,
+  "llm_rounds": 7,
+  "tokens_in": 48749,
+  "tokens_out": 767,
+  "cost_usd": 0.00526,
+  "seconds": 15.6,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "plan_searches",
+      "args": {
+        "parts": [
+          {
+            "part": "case material chosen and why",
+            "query": "case material why chosen"
+          },
+          {
+            "part": "what sacrificed after costs came in to keep material",
+            "query": "costs sacrifice keep material"
+          }
+        ]
+      },
+      "result_chars": 7601,
+      "result_preview": "=== Part: case material chosen and why  (search: 'case material why chosen')\n--- TS3012c turns #277-#287\n#277 B: Speech recognition.\n#278 D: Yeah, tha that's uh very important. And a third thing is um yeah, it's uh should be easy to use, so not not too much bu buttons and uh channel selection. I thi"
+    },
+    {
+      "step": 2,
+      "tool": "list_meetings",
+      "args": {
+        "team": "TS3012"
+      },
+      "result_chars": 123,
+      "result_preview": "TS3012a (meeting a, 119 turns)\nTS3012b (meeting b, 571 turns)\nTS3012c (meeting c, 653 turns)\nTS3012d (meeting d, 579 turns)"
+    },
+    {
+      "step": 2,
+      "tool": "get_memory",
+      "args": {
+        "team": "TS3012",
+        "topic": "material"
+      },
+      "result_chars": 3135,
+      "result_preview": "Facts about 'material', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  replaced F3603 TS3012a #101 decision/proposed [case material] who=C: C proposes the remote control case material should be light.\n           evidence: \"the material it is made of, it should"
+    },
+    {
+      "step": 2,
+      "tool": "get_roles",
+      "args": {
+        "team": "TS3012"
+      },
+      "result_chars": 228,
+      "result_preview": "Speaker A = Project Manager (said in TS3012a turn #0)\nSpeaker B = User Interface Designer (said in TS3012a turn #6)\nSpeaker C = Industrial Designer (said in TS3012a turn #8)\nSpeaker D = Marketing Expert (said in TS3012a turn #4)"
+    },
+    {
+      "step": 2,
+      "tool": "search",
+      "args": {
+        "team": "TS3012",
+        "query": "rubber costs budget cost remove features",
+        "meetings": [
+          "TS3012d"
+        ]
+      },
+      "result_chars": 7575,
+      "result_preview": "--- TS3012d turns #25-#38\n#25 A: Mm-hmm. Okay.\n#26 C: No, uh this is just a description of what we see there. So\n#27 A: Yeah.\n#28 D: Yeah.\n#29 B: Oh.\n#30 C: Speaks for itself.\n#31 B: That's pretty much it.\n#32 A: Okay. Now it's my time to ruin everything. Well, not ruin everything, but no, nah. Fina"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "TS3012c",
+        "start_turn": 102,
+        "end_turn": 117
+      },
+      "result_chars": 1329,
+      "result_preview": "#102 B: No, wood's not an option. No.\n#103 A: No, wood i wood's not an option. Well it it's stylish, but we can yeah, but you can change your covers anyway.\n#104 C: Okay. Hmm.\n#105 D: No.\n#106 C: Okay. My personal thought was uh rubber because I had an email, I believe it was from you, uh f against "
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "TS3012c",
+        "start_turn": 277,
+        "end_turn": 287
+      },
+      "result_chars": 1104,
+      "result_preview": "#277 B: Speech recognition.\n#278 D: Yeah, tha that's uh very important. And a third thing is um yeah, it's uh should be easy to use, so not not too much bu buttons and uh channel selection. I think that's uh what you showed is uh perfect. And what the pe young people want is uh in Paris and and in M"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "TS3012d",
+        "start_turn": 30,
+        "end_turn": 45
+      },
+      "result_chars": 2105,
+      "result_preview": "#30 C: Speaks for itself.\n#31 B: That's pretty much it.\n#32 A: Okay. Now it's my time to ruin everything. Well, not ruin everything, but no, nah. Finances, that's what we have here, what you drew. We have battery power, we have advanced chips and the sam the sensor. The sample sensor and uh for spea"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "TS3012d",
+        "start_turn": 119,
+        "end_turn": 143
+      },
+      "result_chars": 1899,
+      "result_preview": "#119 C: I'd say lose the curve and the colour and\n#120 A: I say lose the curve. Oh that's true, we could lose the c yeah, I forgot that, sorry. Uh the curve. So That's just this one just d this is the banana curve.\n#121 B: So which curve is that ba that's basically that curve.\n#122 C: Hmm.\n#123 D: Y"
+    },
+    {
+      "step": 4,
+      "tool": "submit_answer",
+      "answer": "Team TS3012 chose rubber because it softens falls and makes the remote more durable, and its spongy feel also suited the design. Once costs came in, they kept the rubber and sacrificed the special yellow colour, leaving customization as an optional extra.",
+      "parts": [
+        {
+          "part": "case material chosen and why",
+          "evidence": "TS3012c #106-#116, #278-#286"
+        },
+        {
+          "part": "what sacrificed after costs came in to keep material",
+          "evidence": "TS3012d #32-#43, #134-#142"
+        }
+      ],
+      "valid": 2,
+      "failures": [],
+      "repairs": [],
+      "role_problems": [],
+      "parts_not_found": [],
+      "outcome_check": [
+        "Your sentence \"Once costs came in, they kept the rubber and sacrificed the special yellow colour, leaving customization as an optional \" reads as: special colour included / chosen. Memory's CURRENT decision is REJECTED (TS3012d #139): B and C agree to remove special colour from basic product and offer it as an extra option.",
+        "Your sentence \"Once costs came in, they kept the rubber and sacrificed the special yellow colour, leaving customization as an optional \" reads as: special colour included / chosen. Memory's CURRENT decision is REJECTED (TS3012d #139): B and C agree to remove special colour from basic product and offer it as an extra option."
+      ]
+    },
+    {
+      "step": 5,
+      "tool": "get_memory",
+      "args": {
+        "team": "TS3012",
+        "topic": "special colour"
+      },
+      "result_chars": 2110,
+      "result_preview": "Facts about 'special colour', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  replaced F3889 TS3012d #43 decision/rejected [special colour] who=A: A decides to remove the special yellow colour to reduce costs.\n           evidence: \"I had to take out the special"
+    },
+    {
+      "step": 6,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "TS3012d",
+        "start_turn": 136,
+        "end_turn": 143
+      },
+      "result_chars": 829,
+      "result_preview": "#136 A: So the only only solution is either to use the l y lose the yellow or lose the rubber. And I'm in favour of keeping the rubber, because it has more more advantages than the colour yellow has.\n#137 B: I would\n#138 C: Oh. I agree.\n#139 B: Yeah. I would say I would agree with you on the colour,"
+    },
+    {
+      "step": 7,
+      "tool": "submit_answer",
+      "answer": "They chose rubber because it softens falls and makes the remote more durable, with its spongy feel also seen as a good fit. After costs came in, they kept rubber and removed yellow from the basic product, making the special colour an optional extra.",
+      "parts": [
+        {
+          "part": "case material chosen and why",
+          "evidence": "TS3012c #106-#116, #278-#286"
+        },
+        {
+          "part": "what sacrificed after costs came in to keep material",
+          "evidence": "TS3012d #32-#43, #136-#142"
+        }
+      ],
+      "valid": 3,
+      "failures": [],
+      "repairs": [],
+      "role_problems": [],
+      "parts_not_found": []
+    }
+  ]
+}

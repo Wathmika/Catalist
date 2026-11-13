@@ -1,0 +1,112 @@
+{
+  "about": "Held-out test set: 6 questions on 5 teams that neither Catalist's 25 questions nor our 10 development questions use (ES2012, ES2013, IS1000, IS1005, IS1006). Written after the agent code was frozen (prompt a4), answers checked by reading the transcripts, every citation verified by tests/check_quotes.py. Run ONCE; do not change the code based on these results, or they stop being held out. Note: memory's role table is wrong for ES2013 (it says B = User Interface Designer, citing a turn that doesn't state a role); from the transcripts B is Kate, the Industrial Designer.",
+  "questions": [
+    {
+      "id": "H01",
+      "team": "ES2013",
+      "question": "Which energy sources did Team ES2013 consider for their remote, why was solar ruled out, and what did they settle on?",
+      "answer": "The industrial designer (Speaker B) presented standard AA batteries, a wind-up and kinetic energy; solar had been ruled out because it is no good in the dark. In meeting c battery and kinetic were the front-runners and the project manager (Speaker A) summed up the consensus as kinetic if at all possible, which meeting d confirmed.",
+      "key_facts": [
+        "options: AA batteries, wind-up, kinetic (and solar)",
+        "solar ruled out: not good in the dark",
+        "battery and kinetic were the front-runners (c)",
+        "consensus in c: kinetic if possible",
+        "confirmed kinetic in d"
+      ],
+      "citations": [
+        {"meeting_id": "ES2013c", "quote": "Or we we had talked about solar power, but I thing that we agreed that that's not so good in the dark."},
+        {"meeting_id": "ES2013c", "quote": "So the consensus seems to be use the kinetic if it's at all possible."},
+        {"meeting_id": "ES2013d", "quote": "we would use plastic with a rubber casing, I think was the consensus, powered by kinetic energy."}
+      ]
+    },
+    {
+      "id": "H02",
+      "team": "ES2013",
+      "question": "Team ES2013 considered titanium for the case. Who liked it and why, why was it dropped, and what case did they end up with within the budget?",
+      "answer": "Speakers B and C liked titanium; C said she had been influenced by pictures of iPods, minimalist and shiny. The project manager (Speaker A) said titanium was out because it is too expensive and can't make the double curves, and the team chose a plastic case with a spongy rubber casing. In meeting d the rubber was added as a case supplement and the total came to 9.20 against the 12.50 allowed.",
+      "key_facts": [
+        "B and C liked titanium",
+        "C: influenced by iPods, minimalist and shiny",
+        "dropped: too expensive and can't do double curves (A)",
+        "plastic with a rubber (spongy) casing",
+        "rubber added in d; total 9.20 vs 12.50 budget"
+      ],
+      "citations": [
+        {"meeting_id": "ES2013c", "quote": "I was thinking titanium, I was thinking it's just I have been influenced by pictures of iPods"},
+        {"meeting_id": "ES2013c", "quote": "I think we've discussed not having titanium. One, it's too expensive, um and second, it won't do this double um curves."},
+        {"meeting_id": "ES2013d", "quote": "Um and the total cost has been calculated as nine Pounds twenty out of the twelve and a half we were allowed."}
+      ]
+    },
+    {
+      "id": "H03",
+      "team": "IS1000",
+      "question": "In meeting c, Team IS1000 doubted that speech recognition would fit the budget and planned to find out its cost. What did they learn in meeting d, and what happened to speech recognition?",
+      "answer": "In meeting c the industrial designer (Speaker D) was not sure a speech recognition system was feasible within about twelve Euros, and Speaker C suggested checking the cost with the coffee machine unit. In meeting d Speaker C reported the manufacturer's figure of about 3 Euros per item, but the advanced remote came to about 16 Euros, well outside the budget, so the LCD screen was cut and speech recognition was dropped.",
+      "key_facts": [
+        "D doubted speech recognition was feasible within the budget (c)",
+        "C proposed checking the cost with the coffee machine unit (c)",
+        "C reported about 3 Euros per item (d)",
+        "advanced remote about 16 Euros, outside the budget (d)",
+        "speech recognition dropped in d (with the LCD)"
+      ],
+      "citations": [
+        {"meeting_id": "IS1000c", "quote": "but for the A_S_R_ system, uh I'm not sure if it's feasible to have this or"},
+        {"meeting_id": "IS1000d", "quote": "they say basically that the S_R_ system would be uh something like three Francs per item so three Euros sorry"},
+        {"meeting_id": "IS1000d", "quote": "Okay. So L_C_D_'s out, is speech rec out now?"}
+      ]
+    },
+    {
+      "id": "H04",
+      "team": "ES2012",
+      "question": "In meeting c Team ES2012 agreed on a custom chip. What chip did they end up with, which expensive part did they keep, and how did the costing come out?",
+      "answer": "In meeting c the project manager (Speaker A) confirmed a custom chip because technological innovation was important. In meeting d he said they would use a regular standard chip instead, but kept the expensive voice sensor because it was fundamental to the design, and the costing came in exactly on target at 12.50.",
+      "key_facts": [
+        "custom chip in c, for technological innovation (A)",
+        "d: regular standard chip instead",
+        "voice sensor kept as fundamental despite cost",
+        "costing exactly on target at 12.50"
+      ],
+      "citations": [
+        {"meeting_id": "ES2012c", "quote": "We're having a a custom chip, but given the the we've cut the functions down"},
+        {"meeting_id": "ES2012d", "quote": "we will have to find a s a regular standard chip to to do this with"},
+        {"meeting_id": "ES2012d", "quote": "The uh the the voice sensor is is expensive but we we made a a basic decision that that was absolutely fundamental"}
+      ]
+    },
+    {
+      "id": "H05",
+      "team": "IS1005",
+      "question": "Who in Team IS1005 wanted radio waves instead of infra-red and why, what arguments were made against it, and which signal type did they choose?",
+      "answer": "The interface designer (Speaker C) preferred radio waves because an infra-red remote has to be pointed in a specific direction. The technical designer (Speaker B) also liked radio but would stick to infra-red for design and price, and the marketing expert (Speaker D) argued radio was several times more expensive while every remote on the market uses infra-red, so people expect nothing else. In meeting c the team agreed on infra-red.",
+      "key_facts": [
+        "C (Interface Designer) wanted radio waves (a)",
+        "reason: infra-red must be pointed in a specific direction",
+        "B preferred radio but would stick to infra-red for design and price (b)",
+        "D (Marketing): more expensive, all other remotes use infra-red so people expect it (b)",
+        "infra-red agreed in c"
+      ],
+      "citations": [
+        {"meeting_id": "IS1005a", "quote": "I prefer um remote control working with radio waves, because remote control working with infra-red rays you should you should you should keep it in a specific direction"},
+        {"meeting_id": "IS1005b", "quote": "all the other remote controls on the market have infra-red, so people don't expect anything other than infra-red"},
+        {"meeting_id": "IS1005c", "quote": "So, the last point we decided it's infra-red, I guess."}
+      ]
+    },
+    {
+      "id": "H06",
+      "team": "IS1006",
+      "question": "Team IS1006 agreed on an energy source in meeting c. How did it change in meeting d, and how did the team get from its 17.8 Euro estimate down to the budget?",
+      "answer": "In meeting c the industrial designer (Speaker C) settled on two batteries and no solar. In meeting d the user interface designer (Speaker B) proposed a hand dynamo powered by pressing the buttons, and they ended with a hand dynamo plus a battery. The estimate stood at 17.8 Euros, and they reached the target by typing negative numbers into the cost sheet rather than by real cuts.",
+      "key_facts": [
+        "c: two batteries, no solar (C)",
+        "d: B proposed a hand dynamo from button presses",
+        "final: hand dynamo plus a battery",
+        "estimate 17.8 Euros, over the 12.50 budget (d)",
+        "target reached by entering negative values in the cost sheet, not real cuts"
+      ],
+      "citations": [
+        {"meeting_id": "IS1006c", "quote": "and we just stick with two batteries so it's not any solar"},
+        {"meeting_id": "IS1006d", "quote": "Oh, we can put uh a hand dynamo and a battery if you want."},
+        {"meeting_id": "IS1006d", "quote": "Maybe put minus two, so it looks uh more reasonable."}
+      ]
+    }
+  ]
+}

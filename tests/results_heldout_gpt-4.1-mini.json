@@ -1,0 +1,238 @@
+[
+  {
+    "id": "H01",
+    "team": "ES2013",
+    "answer": "Team ES2013 considered standard AA batteries, wind-up, kinetic, and solar energy sources for their remote. Solar was ruled out because it would not work well in the dark, such as when watching TV at night. They settled on using kinetic energy as the power source for the remote control.",
+    "citations": [
+      {
+        "meeting_id": "ES2013c",
+        "quote": "We can have your bog standard double double A_ batteries in a replaceable um little compartment. We can have a hand sorry a wind-up, yeah, which I think is quite an interesting concept for a sorry for a remote control, but i it maybe is doesn't quite go with the um the fruit and veg. Um one that one that I think is quite interesting is the kinetic energy source, where um you you actually get the energy by moving the device, which is quite a ni a nice and neat one. You have to it means that if it's sitting there for a long time it probably won't work, but you have to sort of throw it between your hands every now and then, it'll work. Or we we had talked about solar power, but I thing that we agreed that that's not so good in the dark."
+      },
+      {
+        "meeting_id": "ES2013b",
+        "quote": "Well solar may not be so good when you're watching T_V_ in the night,"
+      },
+      {
+        "meeting_id": "ES2013d",
+        "quote": "Um we discussed the various possibilities based on what was presented in those presentations. The market trend of fruit and veg, mm spongy, uh fancy and elegant more than technologically innovative and that more than easy. Um we decided chip on print would be used. Um we would use plastic with a rubber casing, I think was the consensus, powered by kinetic energy."
+      }
+    ],
+    "key_facts": [
+      "options: AA batteries, wind-up, kinetic (and solar)",
+      "solar ruled out: not good in the dark",
+      "battery and kinetic were the front-runners (c)",
+      "consensus in c: kinetic if possible",
+      "confirmed kinetic in d"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    "facts_found": 4,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 3,
+    "near_reference": 2,
+    "steps": 11,
+    "cost_usd": 0.03143,
+    "seconds": 24.7
+  },
+  {
+    "id": "H02",
+    "team": "ES2013",
+    "answer": "Speaker C liked titanium because it was minimalist and shiny, influenced by iPods, and Speaker D agreed it fulfilled the priority of being fancy. Titanium was dropped because it was considered too expensive, too futuristic, and difficult to make fancy shapes like double curves. The team ended up agreeing on a plastic case, possibly combined with rubber, within the budget constraints.",
+    "citations": [
+      {
+        "meeting_id": "ES2013c",
+        "quote": "I was thinking titanium, I was thinking it's just I have been influenced by pictures of iPods, and they're also minimalist and shiny."
+      },
+      {
+        "meeting_id": "ES2013d",
+        "quote": "Yeah, can we do some what ifs, 'cause it may I mean I I still quite like the idea of combining plastic and rubber myself, but it depends on the cost, I guess."
+      }
+    ],
+    "key_facts": [
+      "B and C liked titanium",
+      "C: influenced by iPods, minimalist and shiny",
+      "dropped: too expensive and can't do double curves (A)",
+      "plastic with a rubber (spongy) casing",
+      "rubber added in d; total 9.20 vs 12.50 budget"
+    ],
+    "present": [
+      true,
+      true,
+      false,
+      true,
+      false
+    ],
+    "facts_found": 3,
+    "facts_total": 5,
+    "valid_citations": 2,
+    "meetings_cited": 2,
+    "near_reference": 1,
+    "steps": 11,
+    "cost_usd": 0.02462,
+    "seconds": 23.3
+  },
+  {
+    "id": "H03",
+    "team": "IS1000",
+    "answer": "In meeting c, Team IS1000 doubted speech recognition would fit the budget and planned to find out its cost. In meeting d, they learned the speech recognition system would cost about 3 Euros per unit. They then decided to remove speech recognition due to budget constraints.",
+    "citations": [
+      {
+        "meeting_id": "IS1000b",
+        "quote": "we will we can make this for for twelve Euro fi and fifty cents."
+      },
+      {
+        "meeting_id": "IS1000d",
+        "quote": "the S_R_ system would be uh something like three Francs per item so three Euros sorry"
+      }
+    ],
+    "key_facts": [
+      "D doubted speech recognition was feasible within the budget (c)",
+      "C proposed checking the cost with the coffee machine unit (c)",
+      "C reported about 3 Euros per item (d)",
+      "advanced remote about 16 Euros, outside the budget (d)",
+      "speech recognition dropped in d (with the LCD)"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    "facts_found": 4,
+    "facts_total": 5,
+    "valid_citations": 2,
+    "meetings_cited": 2,
+    "near_reference": 1,
+    "steps": 9,
+    "cost_usd": 0.01762,
+    "seconds": 16.9
+  },
+  {
+    "id": "H04",
+    "team": "ES2012",
+    "answer": "In meeting c, Team ES2012 agreed on having a custom chip with reduced functions to manage complexity, as stated by Speaker A (Project Manager). They kept the expensive voice sensor part, which was considered fundamental to the design. The costing came out exactly on target at 12.5 Euros, with the team confident they could argue the innovative and fashion accessory concept justifies any slight cost compromises.",
+    "citations": [
+      {
+        "meeting_id": "ES2012c",
+        "quote": "We're having a a custom chip, but given the the we've cut the functions down, um that will hopefully not be too problematic"
+      },
+      {
+        "meeting_id": "ES2012d",
+        "quote": "The uh the the voice sensor is is expensive but we we made a a basic decision that that was absolutely fundamental to the to the design so that that has to stay"
+      },
+      {
+        "meeting_id": "ES2012d",
+        "quote": "the costings uh come in at exactly on target at twelve point five uh but I thi I think we have a a very strong case to argue that"
+      }
+    ],
+    "key_facts": [
+      "custom chip in c, for technological innovation (A)",
+      "d: regular standard chip instead",
+      "voice sensor kept as fundamental despite cost",
+      "costing exactly on target at 12.50"
+    ],
+    "present": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "facts_found": 3,
+    "facts_total": 4,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 2,
+    "steps": 5,
+    "cost_usd": 0.00733,
+    "seconds": 7.3
+  },
+  {
+    "id": "H05",
+    "team": "IS1005",
+    "answer": "Speaker C (User Interface Designer) wanted radio waves because they allow the remote control to work in any direction without tuning, as stated in IS1005a and IS1005b. Arguments against radio waves were cost and market expectations: Speaker B (Technical Designer) preferred infra-red due to lower price and sufficient range, and Speaker D (Marketing Expert) said spending extra money was not worth it since customers expect infra-red. The team chose infra-red signals for the remote control.",
+    "citations": [
+      {
+        "meeting_id": "IS1005a",
+        "quote": "I uh I prefer um remote control working with radio waves, because remote control working with infra-red rays you should you should you should keep it in a specific direction and then try it hard to tune."
+      },
+      {
+        "meeting_id": "IS1005b",
+        "quote": "personal preferences, uh uh uh uh certainly a remote control with uh working with radio waves is uh preferred because uh you can pr you can take it in any direction and you don't need to tune it any way."
+      },
+      {
+        "meeting_id": "IS1005b",
+        "quote": "my personal preference is yes, I would like also preferably to use R_W_ circuit, but from the point of view uh of the design and price, I would stick to I_R_s."
+      }
+    ],
+    "key_facts": [
+      "C (Interface Designer) wanted radio waves (a)",
+      "reason: infra-red must be pointed in a specific direction",
+      "B preferred radio but would stick to infra-red for design and price (b)",
+      "D (Marketing): more expensive, all other remotes use infra-red so people expect it (b)",
+      "infra-red agreed in c"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "facts_found": 5,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 1,
+    "steps": 9,
+    "cost_usd": 0.01894,
+    "seconds": 18.0
+  },
+  {
+    "id": "H06",
+    "team": "IS1006",
+    "answer": "In meeting c, Team IS1006 agreed to use a simple battery as the energy source instead of solar cells. In meeting d, they changed to a combined energy source using a hand dynamo mechanism plus a battery. The team reduced costs from their initial 17.8 Euro estimate by choosing simple push buttons instead of LCDs and opting for titanium design over rubber, which is more expensive, allowing budget space for speech recognition technology.",
+    "citations": [
+      {
+        "meeting_id": "IS1006c",
+        "quote": "we would like to propose battery instead of solar cells"
+      },
+      {
+        "meeting_id": "IS1006d",
+        "quote": "producing electricity from mechanical energy. So, the point is that when you take device and push the button, you produce enough energy"
+      },
+      {
+        "meeting_id": "IS1006c",
+        "quote": "we want to go for simple push buttons because it need a simple chip and it's really lesser uh re really less expensive compared to L_C_D_ which are uh which needs advanced chip technology and it's more expensive"
+      }
+    ],
+    "key_facts": [
+      "c: two batteries, no solar (C)",
+      "d: B proposed a hand dynamo from button presses",
+      "final: hand dynamo plus a battery",
+      "estimate 17.8 Euros, over the 12.50 budget (d)",
+      "target reached by entering negative values in the cost sheet, not real cuts"
+    ],
+    "present": [
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    "facts_found": 1,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 0,
+    "steps": 7,
+    "cost_usd": 0.01459,
+    "seconds": 9.8
+  }
+]

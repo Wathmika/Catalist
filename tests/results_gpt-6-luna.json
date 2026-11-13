@@ -1,0 +1,398 @@
+[
+  {
+    "id": "T01",
+    "team": "TS3012",
+    "answer": "Speaker A (Project Manager) shifted toward keeping the LCD because the team thought it appealed to the target group, and the final cost discussion cited stronger customer support for LCD (90%) than speech recognition (60%); Speaker B also said speech offered no extra function over a normal remote. The LCD remained in the final design, while speech recognition was scrapped to meet the 12.50 Euros production-cost cap.",
+    "citations": [
+      {
+        "meeting_id": "TS3012c",
+        "quote": "we're going towards the deluxe edition anyway, because that seems to be what the people want."
+      },
+      {
+        "meeting_id": "TS3012d",
+        "quote": "ninety percent who favour an L_C_D_ display, and only sixty percent that favour speech recognition."
+      },
+      {
+        "meeting_id": "TS3012d",
+        "quote": "in order to be cou to to have production cost of twelve and a half Euros, spe scrap speech recognition"
+      }
+    ],
+    "key_facts": [
+      "A first wanted to drop LCD (meeting b)",
+      "D's marketing report: young people want LCD",
+      "LCD included in c and kept in final design",
+      "speech recognition dropped in d for cost",
+      "LCD ~90% vs speech ~60%"
+    ],
+    "present": [
+      false,
+      true,
+      true,
+      true,
+      true
+    ],
+    "facts_found": 4,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 1,
+    "steps": 14,
+    "cost_usd": 0.00667,
+    "seconds": 16.2
+  },
+  {
+    "id": "T02",
+    "team": "TS3012",
+    "answer": "Speaker C (Industrial Designer) preferred kinetic power. Speaker B (User Interface Designer) objected that people would not shake the remote before using it, and the team chose regular batteries.",
+    "citations": [
+      {
+        "meeting_id": "TS3012c",
+        "quote": "My personal uh fav favourite is the kinetic provision because"
+      },
+      {
+        "meeting_id": "TS3012c",
+        "quote": "Is that enough? Because I don't really see people shaking their remote control before using it."
+      },
+      {
+        "meeting_id": "TS3012b",
+        "quote": "But isn't that expensive in the entire package?"
+      }
+    ],
+    "key_facts": [
+      "C (Industrial Designer) preferred kinetic",
+      "A (Project Manager) objected: remotes lie still ~99% of the time",
+      "final: regular/basic batteries"
+    ],
+    "present": [
+      true,
+      false,
+      true
+    ],
+    "facts_found": 2,
+    "facts_total": 3,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 2,
+    "steps": 9,
+    "cost_usd": 0.00404,
+    "seconds": 13.1
+  },
+  {
+    "id": "T03",
+    "team": "TS3012",
+    "answer": "Speaker C (Industrial Designer) wanted the scroll-wheel as a flashy design feature; others argued it had no useful added function, took up space, and scrolling through channels could be annoying. It was ultimately left out: the team said, “No r no scroll-wheel. Okay.”",
+    "citations": [
+      {
+        "meeting_id": "TS3012c",
+        "quote": "I think would be cool, scroll-wheel. It's not that much uh if we take a normal scroll-wheel without the pushing, then it's not expensive."
+      },
+      {
+        "meeting_id": "TS3012c",
+        "quote": "I think channel selection would be annoying because it just c you could scroll past the channel or"
+      },
+      {
+        "meeting_id": "TS3012c",
+        "quote": "No r no scroll-wheel. Okay. Um I don't see anything missing really."
+      }
+    ],
+    "key_facts": [
+      "C wanted the scroll-wheel",
+      "argument: push-buttons do the job / scrolling channels is annoying",
+      "scroll-wheel not included"
+    ],
+    "present": [
+      true,
+      true,
+      true
+    ],
+    "facts_found": 3,
+    "facts_total": 3,
+    "valid_citations": 3,
+    "meetings_cited": 1,
+    "near_reference": 2,
+    "steps": 11,
+    "cost_usd": 0.0052,
+    "seconds": 15.0
+  },
+  {
+    "id": "T04",
+    "team": "TS3012",
+    "answer": "They chose rubber because it softens falls and makes the remote more durable, with its spongy feel also seen as a good fit. After costs came in, they kept rubber and removed yellow from the basic product, making the special colour an optional extra.",
+    "citations": [
+      {
+        "meeting_id": "TS3012c",
+        "quote": "If it falls it might crack. And rubber uh kind of softens the fall."
+      },
+      {
+        "meeting_id": "TS3012d",
+        "quote": "I'm in favour of keeping the rubber, because it has more more advantages than the colour yellow has."
+      },
+      {
+        "meeting_id": "TS3012d",
+        "quote": "that's an extra option, an extra service we can deliver for a little bit of more money."
+      }
+    ],
+    "key_facts": [
+      "rubber",
+      "reason: durability when dropped",
+      "reason: young users like spongy feel",
+      "kept rubber, dropped the yellow/special colour to meet budget (meeting d)"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "facts_found": 4,
+    "facts_total": 4,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 2,
+    "steps": 13,
+    "cost_usd": 0.00526,
+    "seconds": 15.6
+  },
+  {
+    "id": "T05",
+    "team": "ES2005",
+    "answer": "The first costing was 14.60 Euros against a 12.50 Euros limit. They removed one of the double-curved features—the biggest expense—and the revised estimate was 11.60 Euros, putting them under budget.",
+    "citations": [
+      {
+        "meeting_id": "ES2005d",
+        "quote": "unfortunately the unit we are currently going to produce minus the extra scroll buttons, uh it's gonna cost us fourteen point six Euros."
+      },
+      {
+        "meeting_id": "ES2005a",
+        "quote": "remember we're trying to make it for twelve Euros fifty."
+      },
+      {
+        "meeting_id": "ES2005d",
+        "quote": "it's meant to be one, yeah, I don't know why I put two in there"
+      }
+    ],
+    "key_facts": [
+      "first cost 14.6 euros",
+      "limit 12.50 euros",
+      "duplicate double-curve entry removed (flattening suggested first)",
+      "final 11.60 euros, under budget",
+      "scroll-wheel still not affordable"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "facts_found": 4,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 2,
+    "steps": 10,
+    "cost_usd": 0.00506,
+    "seconds": 14.5
+  },
+  {
+    "id": "T06",
+    "team": "TS3008",
+    "answer": "Speaker D disagreed, arguing that under-forties were only about 30% of the market; Speaker A argued that the company already served older customers and needed a new customer group. They settled on a remote primarily for younger people but not unsuitable for older people, and by the final meeting the audience was described as people under 40.",
+    "citations": [
+      {
+        "meeting_id": "TS3008b",
+        "quote": "It's a very small market which we will approach then if we uh want to reach customers younger than forty."
+      },
+      {
+        "meeting_id": "TS3008b",
+        "quote": "Our company already sells remote control to the older people, but we we also want, you know, a new customer group."
+      },
+      {
+        "meeting_id": "TS3008d",
+        "quote": "It will be bought by people under the age of forty."
+      }
+    ],
+    "key_facts": [
+      "D (Marketing) disagreed",
+      "D: under-40s only ~30% of the market",
+      "A (PM): company already covers older customers, wants a new group",
+      "target stayed under forty"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "facts_found": 4,
+    "facts_total": 4,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 3,
+    "steps": 10,
+    "cost_usd": 0.00554,
+    "seconds": 14.2
+  },
+  {
+    "id": "T07",
+    "team": "ES2015",
+    "answer": "Speaker B (Industrial Designer) proposed kinetic energy. They did not keep a solar backup; they settled on fully kinetic power with no backup, and the final operating cost was 12.20 Euros, just under the budget limit.",
+    "citations": [
+      {
+        "meeting_id": "ES2015c",
+        "quote": "Kinetic energy is something that's been recently developed."
+      },
+      {
+        "meeting_id": "ES2015c",
+        "quote": "I think we should just like take uh advantage of like using this to its full potential."
+      },
+      {
+        "meeting_id": "ES2015d",
+        "quote": "our operating cost is twelve twenty Euros."
+      }
+    ],
+    "key_facts": [
+      "B (Industrial Designer) proposed kinetic",
+      "no solar backup: fully kinetic",
+      "kinetic cost 3 euros",
+      "total 12.20 euros",
+      "just under budget (12.50)"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "facts_found": 5,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 1,
+    "steps": 9,
+    "cost_usd": 0.0023,
+    "seconds": 8.4
+  },
+  {
+    "id": "T08",
+    "team": "IS1004",
+    "answer": "Speaker A (Project Manager) decided against speech recognition, citing uncertainty that it would work and difficulty guaranteeing performance; Speaker B (User Interface Designer) also raised TV background noise and said speech recognition was inappropriate for a TV environment. Instead, the final design used a base station with a button that makes the remote beep so it can be found when lost.",
+    "citations": [
+      {
+        "meeting_id": "IS1004b",
+        "quote": "I'm definit definitely not keen on going to speech recognition technologies. I'm not confident enough. I'm not sure that that we'll have a product really that work."
+      },
+      {
+        "meeting_id": "IS1004c",
+        "quote": "I think it's not really appropriate for uh television environment."
+      },
+      {
+        "meeting_id": "IS1004c",
+        "quote": "there is a button, if you press that button wherever the remote it'll start beeping so you know where the remote is."
+      }
+    ],
+    "key_facts": [
+      "A (PM) decided against it (meeting b)",
+      "reason: not confident it works",
+      "reason: TV background noise (B)",
+      "final: simple beep, not the sample speaker"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "facts_found": 4,
+    "facts_total": 4,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 0,
+    "steps": 14,
+    "cost_usd": 0.00959,
+    "seconds": 17.9
+  },
+  {
+    "id": "T09",
+    "team": "IS1004",
+    "answer": "They resolved the open question by deciding against an LCD screen, and meeting d confirmed the final design had no LCD. Cost was a key concern, and they also cited limited space on the banana-shaped remote and the extra requirements an LCD would entail; marketing prioritized look and feel over those added inputs.",
+    "citations": [
+      {
+        "meeting_id": "IS1004c",
+        "quote": "we are not decided about u the use of L_C_D_ screen on on the remote control because of costs."
+      },
+      {
+        "meeting_id": "IS1004c",
+        "quote": "you will not have pla enough a lot of place to put a L_C_D_ on a banana also."
+      },
+      {
+        "meeting_id": "IS1004d",
+        "quote": "No L_C_D_, no speech recognition technology, okay, we went through a b to a banana"
+      }
+    ],
+    "key_facts": [
+      "left open in b, to report back next meeting",
+      "dropped in meeting c",
+      "reason: cost at 25 euros",
+      "reason: needs internet connection",
+      "reason: no room on banana shape"
+    ],
+    "present": [
+      false,
+      false,
+      true,
+      true,
+      true
+    ],
+    "facts_found": 3,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 0,
+    "steps": 10,
+    "cost_usd": 0.003,
+    "seconds": 10.2
+  },
+  {
+    "id": "T10",
+    "team": "TS3005",
+    "answer": "Speaker C (Industrial Designer) argued for rubber because remotes are often dropped and rubber helps prevent breakage; titanium was too expensive, and rubber is easy to color and does not show scratches as readily. Wood was raised later as an alternative, but Speaker A said it mainly helps older people, and Speaker C rejected making the remote out of wood.",
+    "citations": [
+      {
+        "meeting_id": "TS3005c",
+        "quote": "when you use a remote control a lot of people uh will uh will uh drop their remote control and they break uh becau the uh titanium was also an option."
+      },
+      {
+        "meeting_id": "TS3005c",
+        "quote": "rubber l makes it easy to uh to to it lets lets itself colour. Uh titanium uh you have to paint it and with that uh it's possible to scratch it"
+      },
+      {
+        "meeting_id": "TS3005d",
+        "quote": "Yeah, mm-hmm. Yeah, but uh a wooden remote control only helps for uh old people we discussed, yes?"
+      }
+    ],
+    "key_facts": [
+      "C (Industrial Designer) argued for rubber",
+      "drops/durability",
+      "titanium expensive and scratches when painted",
+      "D: young people like soft spongy, old like wood",
+      "wood rejected again in d: only for old people"
+    ],
+    "present": [
+      true,
+      false,
+      true,
+      false,
+      false
+    ],
+    "facts_found": 2,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 3,
+    "steps": 7,
+    "cost_usd": 0.00231,
+    "seconds": 8.5
+  }
+]

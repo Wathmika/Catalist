@@ -144,18 +144,36 @@ def norm(text: str) -> str:
 
 
 def call_model(system: str, user: str) -> tuple[dict, int, int]:
-    extra = {}
-    if not MODEL.startswith(("gpt-5", "o")):   # reasoning models don't accept temperature
-        extra["temperature"] = 0               # same input -> (nearly) same output
-    resp = OpenAI().chat.completions.create(
-        model=MODEL,
-        messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-        response_format={"type": "json_schema",
-                         "json_schema": {"name": "meeting_memory", "strict": True, "schema": EXTRACT_SCHEMA}},
-        **extra,
-    )
-    return (json.loads(resp.choices[0].message.content),
-            resp.usage.prompt_tokens, resp.usage.completion_tokens)
+    """One extraction call, with a guard against a known failure: on IS1009b the model got
+    stuck repeating itself until the output was cut off, leaving broken JSON. We cap the
+    output length, and if the JSON is cut off or broken we retry once with a little
+    randomness and a repetition penalty, which breaks the loop."""
+    tokens_in = tokens_out = 0
+    for attempt in (1, 2):
+        extra = {"max_tokens": 12000}
+        if not MODEL.startswith(("gpt-5", "o")):    # reasoning models don't accept these
+            extra["temperature"] = 0 if attempt == 1 else 0.3
+            if attempt == 2:
+                extra["frequency_penalty"] = 0.5    # discourages repeating the same text
+        resp = OpenAI().chat.completions.create(
+            model=MODEL,
+            messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+            response_format={"type": "json_schema",
+                             "json_schema": {"name": "meeting_memory", "strict": True, "schema": EXTRACT_SCHEMA}},
+            **extra,
+        )
+        tokens_in += resp.usage.prompt_tokens        # failed attempts still cost money: count them
+        tokens_out += resp.usage.completion_tokens
+        choice = resp.choices[0]
+        try:
+            if choice.finish_reason == "length":
+                raise ValueError("output cut off at max_tokens")
+            return json.loads(choice.message.content), tokens_in, tokens_out
+        except ValueError as err:                    # JSONDecodeError is a ValueError
+            if attempt == 2:
+                raise RuntimeError(f"bad output twice ({err})") from err
+            print(f"  retrying once: {err}")
+    raise RuntimeError("unreachable")
 
 
 def _key(word: str) -> str:

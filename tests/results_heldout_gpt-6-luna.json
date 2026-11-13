@@ -1,0 +1,242 @@
+[
+  {
+    "id": "H01",
+    "team": "ES2013",
+    "answer": "They considered replaceable AA batteries, wind-up, kinetic energy, and solar power; later they framed the main choice as battery, kinetic, or solar. Solar was ruled out because it would not work well in the dark—when people may be watching TV—and there was concern that low-light or dark conditions could leave the remote without power. They ultimately settled on kinetic energy.",
+    "citations": [
+      {
+        "meeting_id": "ES2013c",
+        "quote": "We can have your bog standard double double A_ batteries in a replaceable um little compartment. We can have a hand sorry a wind-up, yeah, which I think is quite an interesting concept"
+      },
+      {
+        "meeting_id": "ES2013c",
+        "quote": "Or we we had talked about solar power, but I thing that we agreed that that's not so good in the dark."
+      },
+      {
+        "meeting_id": "ES2013d",
+        "quote": "we would use plastic with a rubber casing, I think was the consensus, powered by kinetic energy."
+      }
+    ],
+    "key_facts": [
+      "options: AA batteries, wind-up, kinetic (and solar)",
+      "solar ruled out: not good in the dark",
+      "battery and kinetic were the front-runners (c)",
+      "consensus in c: kinetic if possible",
+      "confirmed kinetic in d"
+    ],
+    "present": [
+      true,
+      true,
+      false,
+      false,
+      false
+    ],
+    "facts_found": 2,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 2,
+    "steps": 9,
+    "cost_usd": 0.00314,
+    "seconds": 10.9
+  },
+  {
+    "id": "H02",
+    "team": "ES2013",
+    "answer": "Speaker B and Speaker C liked titanium; Speaker C said iPod images had influenced the idea because titanium looked minimalist and shiny, and Speaker D saw it as fancy. They dropped it as too expensive and too futuristic for the colourful, slightly organic direction, and because titanium could not make a double-curved case; they settled on plastic with a rubber casing, costing 9.20 Pounds against a 12.50 Pounds budget.",
+    "citations": [
+      {
+        "meeting_id": "ES2013c",
+        "quote": "I was thinking titanium, I was thinking it's just I have been influenced by pictures of iPods, and they're also minimalist and shiny."
+      },
+      {
+        "meeting_id": "ES2013c",
+        "quote": "I mean titanium would be great, but I think it might be a bit too expensive and too kinda spacey. If we're k trying to keep it"
+      },
+      {
+        "meeting_id": "ES2013d",
+        "quote": "Um we would use plastic with a rubber casing, I think was the consensus"
+      }
+    ],
+    "key_facts": [
+      "B and C liked titanium",
+      "C: influenced by iPods, minimalist and shiny",
+      "dropped: too expensive and can't do double curves (A)",
+      "plastic with a rubber (spongy) casing",
+      "rubber added in d; total 9.20 vs 12.50 budget"
+    ],
+    "present": [
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    "facts_found": 4,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 1,
+    "steps": 11,
+    "cost_usd": 0.00658,
+    "seconds": 15.5
+  },
+  {
+    "id": "H03",
+    "team": "IS1000",
+    "answer": "In meeting d, they learned from the manufacturer that speech recognition cost about 3 Euros per item, included in the quoted 16 Euros. They ultimately removed it because of the budget.",
+    "citations": [
+      {
+        "meeting_id": "IS1000c",
+        "quote": "speech recognition, I mean maybe it's possible for for twelve Euro but then then it will be at cost of other functionality"
+      },
+      {
+        "meeting_id": "IS1000d",
+        "quote": "And they say basically that the S_R_ system would be uh something like three Francs per item so three Euros sorry"
+      }
+    ],
+    "key_facts": [
+      "D doubted speech recognition was feasible within the budget (c)",
+      "C proposed checking the cost with the coffee machine unit (c)",
+      "C reported about 3 Euros per item (d)",
+      "advanced remote about 16 Euros, outside the budget (d)",
+      "speech recognition dropped in d (with the LCD)"
+    ],
+    "present": [
+      false,
+      false,
+      true,
+      false,
+      true
+    ],
+    "facts_found": 2,
+    "facts_total": 5,
+    "valid_citations": 2,
+    "meetings_cited": 2,
+    "near_reference": 2,
+    "steps": 11,
+    "cost_usd": 0.00449,
+    "seconds": 16.4
+  },
+  {
+    "id": "H04",
+    "team": "ES2012",
+    "answer": "In meeting c, they agreed on a custom-designed chip, with functions cut down to keep it manageable and to preserve technological innovation. They kept the expensive voice sensor because they considered it fundamental; the costing came out exactly on target at 12.50 (the speaker described it as on budget).",
+    "citations": [
+      {
+        "meeting_id": "ES2012c",
+        "quote": "We're having a a custom chip, but given the the we've cut the functions down"
+      },
+      {
+        "meeting_id": "ES2012d",
+        "quote": "the voice sensor is is expensive but we we made a a basic decision that that was absolutely fundamental to the to the design so that that has to stay"
+      },
+      {
+        "meeting_id": "ES2012d",
+        "quote": "the costings uh come in at exactly on target at twelve point five"
+      }
+    ],
+    "key_facts": [
+      "custom chip in c, for technological innovation (A)",
+      "d: regular standard chip instead",
+      "voice sensor kept as fundamental despite cost",
+      "costing exactly on target at 12.50"
+    ],
+    "present": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "facts_found": 3,
+    "facts_total": 4,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 2,
+    "steps": 11,
+    "cost_usd": 0.00513,
+    "seconds": 12.7
+  },
+  {
+    "id": "H05",
+    "team": "IS1005",
+    "answer": "Speaker C (User Interface Designer) preferred radio waves because infra-red had to be aimed in a specific direction and was difficult to tune; Speaker A also acknowledged the obstacle/aiming limitation. Against radio waves, Speaker B cited high price and said infra-red’s range was adequate, while Speaker D argued the extra expense was not worthwhile because customers expected infra-red and money should go toward usability. The team chose infra-red, citing its company-developed communication chip and low cost.",
+    "citations": [
+      {
+        "meeting_id": "IS1005a",
+        "quote": "I uh I prefer um remote control working with radio waves, because remote control working with infra-red rays you should you should you should keep it in a specific direction"
+      },
+      {
+        "meeting_id": "IS1005b",
+        "quote": "the prices I read are high. So, I know that uh the user interface people and these speak about radio frequency waves"
+      },
+      {
+        "meeting_id": "IS1005c",
+        "quote": "we decided to use the infra-red unit because our company has also developed the chip for communication by the infra-red, including all the stuff inside, so it will be very cheap for us"
+      }
+    ],
+    "key_facts": [
+      "C (Interface Designer) wanted radio waves (a)",
+      "reason: infra-red must be pointed in a specific direction",
+      "B preferred radio but would stick to infra-red for design and price (b)",
+      "D (Marketing): more expensive, all other remotes use infra-red so people expect it (b)",
+      "infra-red agreed in c"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "facts_found": 4,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 3,
+    "near_reference": 1,
+    "steps": 14,
+    "cost_usd": 0.00493,
+    "seconds": 13.1
+  },
+  {
+    "id": "H06",
+    "team": "IS1006",
+    "answer": "In meeting c they agreed on 2 batteries and no solar; in meeting d they switched to a hand dynamo generating electricity from button presses, then settled on combining it with a battery but removing one source to stay on target. To address the €17.8 estimate against the €12.50 budget, they identified the LCD and speaker as the costly items and discussed choosing one or the other, then removed one of the dynamo/battery items when the combined setup exceeded the limit; the transcript does not establish that this alone reduced the total to €12.50. [1][2][3]",
+    "citations": [
+      {
+        "meeting_id": "IS1006c",
+        "quote": "and we just stick with two batteries so it's not any solar or yeah yeah j yeah"
+      },
+      {
+        "meeting_id": "IS1006d",
+        "quote": "Well, as you may know there's some research done in the field of producing energy from mechanical eng, I mean, producing electricity from mechanical energy."
+      },
+      {
+        "meeting_id": "IS1006d",
+        "quote": "Well, if I look at what is the most expensive things, uh it's the L_C_D_ and the speaker."
+      }
+    ],
+    "key_facts": [
+      "c: two batteries, no solar (C)",
+      "d: B proposed a hand dynamo from button presses",
+      "final: hand dynamo plus a battery",
+      "estimate 17.8 Euros, over the 12.50 budget (d)",
+      "target reached by entering negative values in the cost sheet, not real cuts"
+    ],
+    "present": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "facts_found": 4,
+    "facts_total": 5,
+    "valid_citations": 3,
+    "meetings_cited": 2,
+    "near_reference": 1,
+    "steps": 13,
+    "cost_usd": 0.00841,
+    "seconds": 16.0
+  }
+]

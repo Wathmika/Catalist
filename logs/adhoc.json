@@ -1,0 +1,163 @@
+{
+  "question_id": "adhoc",
+  "team": "IS1004",
+  "question": "Why did the team decide against speech recognition, and what did the final remote have instead?",
+  "answer": "They rejected speech recognition because TV background noise could interfere and make it harder to recognize speech, and Speaker A (Project Manager) was not confident it would produce a product that worked. The final remote instead used two scroll wheels—left for volume and right for channel—and a turbo button, with no LCD or speech recognition.",
+  "citations": [
+    {
+      "meeting_id": "IS1004b",
+      "quote": "background noise from the T_V_ which will make the speech recognition much uh harder"
+    },
+    {
+      "meeting_id": "IS1004b",
+      "quote": "I'm definit definitely not keen on going to speech recognition technologies. I'm not confident enough. I'm not sure that that we'll have a product really that work"
+    },
+    {
+      "meeting_id": "IS1004d",
+      "quote": "We've got the two uh uh scroll wheels here which you know one on the the left for the uh volume and the one on the right for for the channel and uh underneath we have the uh the turbo button"
+    }
+  ],
+  "dropped_citations": [],
+  "model": "gpt-6-luna",
+  "prompt_version": "a4",
+  "steps": 11,
+  "llm_rounds": 5,
+  "tokens_in": 28414,
+  "tokens_out": 569,
+  "cost_usd": 0.00313,
+  "seconds": 11.6,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "plan_searches",
+      "args": {
+        "parts": [
+          {
+            "part": "why the team decided against speech recognition",
+            "query": "speech recognition why rejected"
+          },
+          {
+            "part": "what the final remote had instead",
+            "query": "final remote instead buttons"
+          }
+        ]
+      },
+      "result_chars": 7672,
+      "result_preview": "=== Part: why the team decided against speech recognition  (search: 'speech recognition why rejected')\n--- IS1004b turns #102-#107\n#102 A: Excellent. So we have also to focus more on the internet aspects because well well te teletext is outdated now and uh finally, it should be clear that the corpor"
+    },
+    {
+      "step": 2,
+      "tool": "list_meetings",
+      "args": {
+        "team": "IS1004"
+      },
+      "result_chars": 122,
+      "result_preview": "IS1004a (meeting a, 51 turns)\nIS1004b (meeting b, 253 turns)\nIS1004c (meeting c, 420 turns)\nIS1004d (meeting d, 535 turns)"
+    },
+    {
+      "step": 2,
+      "tool": "get_memory",
+      "args": {
+        "team": "IS1004",
+        "topic": "speech"
+      },
+      "result_chars": 1955,
+      "result_preview": "Facts about 'speech', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  CURRENT  F2147 IS1004b #156 number/stated [speech recognition accuracy] who=C [95 %]: Speech recognition system can target 95 to 97 percent accuracy.\n           evidence: \"we can target ninet"
+    },
+    {
+      "step": 2,
+      "tool": "get_memory",
+      "args": {
+        "team": "IS1004",
+        "topic": "remote"
+      },
+      "result_chars": 10243,
+      "result_preview": "Facts about 'remote', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  CURRENT  F2001 IS1004a #8 decision/agreed [project goal] who=A: The project goal is to develop an original, trendy, and user-friendly remote control.\n           evidence: \"the goal of this pr"
+    },
+    {
+      "step": 2,
+      "tool": "get_roles",
+      "args": {
+        "team": "IS1004"
+      },
+      "result_chars": 228,
+      "result_preview": "Speaker A = Project Manager (said in IS1004a turn #3)\nSpeaker B = User Interface Designer (said in IS1004a turn #4)\nSpeaker C = Industrial Designer (said in IS1004a turn #7)\nSpeaker D = Marketing Expert (said in IS1004a turn #6)"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004b",
+        "start_turn": 233,
+        "end_turn": 243
+      },
+      "result_chars": 1614,
+      "result_preview": "#233 A: So the com the um the uh the committment is the following, we don't go for speech recognition technology. The L_C_D_ is still on disc is still open to discussion. It is up to you to go through this um uh this way and to to report report me back next meeting. So\n#234 C: Mm-hmm.\n#235 D: I thin"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004b",
+        "start_turn": 103,
+        "end_turn": 107
+      },
+      "result_chars": 877,
+      "result_preview": "#103 B: I was still uh I was still working on this uh twenty five Euro price point because I think actually having looked at some of the remotes out there, this is quite a low uh price if if we're maybe I can get to this in my presentation though, but um yeah.\n#104 A: So Yeah yeah. Sure sure. So may"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004d",
+        "start_turn": 0,
+        "end_turn": 15
+      },
+      "result_chars": 2395,
+      "result_preview": "#0 A: Okay. Good afternoon again. So we should have our final meeting about the detail designed of detail design of the product of the remote control. Um So here is the agenda for today. Uh uh just going to go quickly through the minutes of the last last uh meeting then we have a p presentation of p"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004c",
+        "start_turn": 400,
+        "end_turn": 412
+      },
+      "result_chars": 1083,
+      "result_preview": "#400 A: to building a prototype, based on this, okay? So next meeting you guys have to prepare the followi things. You have to uh work on the look and feel uh design and you have to work on the user interface, in fact you two you have to work together to model the first uh f first prototype.\n#401 B:"
+    },
+    {
+      "step": 4,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004d",
+        "start_turn": 16,
+        "end_turn": 30
+      },
+      "result_chars": 909,
+      "result_preview": "#16 B: Yeah. Well when you stop scrolling the wheel it stops. But normally with uh it will just uh s stay on each station briefly so you can see the the picture.\n#17 C: Uh\n#18 A: Uh-huh.\n#19 C: And we we do have one more functionality. If you take the banana as such and uh you press the turbo button"
+    },
+    {
+      "step": 5,
+      "tool": "submit_answer",
+      "answer": "They rejected speech recognition because TV background noise could interfere and make it harder to recognize speech, and Speaker A (Project Manager) was not confident it would produce a product that worked. The final remote instead used two scroll wheels—left for volume and right for channel—and a turbo button, with no LCD or speech recognition.",
+      "parts": [
+        {
+          "part": "Why the team decided against speech recognition",
+          "evidence": "IS1004b #105-#107, #243"
+        },
+        {
+          "part": "What the final remote had instead",
+          "evidence": "IS1004d #0, #12, #20"
+        }
+      ],
+      "valid": 3,
+      "failures": [],
+      "repairs": [],
+      "role_problems": [],
+      "parts_not_found": [],
+      "outcome_check": []
+    }
+  ]
+}

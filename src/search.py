@@ -109,6 +109,10 @@ def vector_search(query: str, team: str | None = None, meetings: list[str] | Non
         if v:   # chunks not embedded yet are skipped
             r["score"] = sum(a * b for a, b in zip(qvec, unpack(v[0])))
             scored.append(r)
+    vec_db.close()
+    if rows and not scored:
+        # Without this, hybrid would quietly become keyword-only and we'd never know.
+        raise RuntimeError("no chunk embeddings found - run: python src/embed.py")
     scored.sort(key=lambda r: -r["score"])      # higher = more similar
     return scored[:k]
 
@@ -125,7 +129,7 @@ def search(query: str, team: str | None = None, meetings: list[str] | None = Non
     except (SystemExit, Exception) as err:   # no key, no internet, no embeddings yet
         if mode == "vector":
             raise
-        print(f"[search] vector search unavailable ({err.__class__.__name__}), using keyword only")
+        print(f"[search] vector search unavailable ({err}), using keyword only")
         return keyword_search(query, team, meetings, k)
     if mode == "vector":
         return vec_hits

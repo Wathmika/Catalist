@@ -1,0 +1,29 @@
+Brief for Team TS3012, before their final meeting (based on meetings up to TS3012c).
+
+What has been decided:
+- The remote should recognize a user’s favourite channel automatically, and include a beep-finder button. [TS3012b: "so it's it it does it recognise itself, you don't have to set it"; TS3012b: "the beep is a very simple thing to imple implement, just make a button on your T_V_ and just hit the button, it beeps somewhere"]
+- The remote is universal, uses regular batteries, and has an advanced chip to support the advanced features. [TS3012b: "I think it's universal. I think we should go for universal"; TS3012c: "energy, we choose regular regular batteries. The chip is advanced because we have the advanced features."]
+- The team’s current direction is the deluxe model with an LCD screen, while voice recognition is being considered for inclusion based on user interest. [TS3012c: "I think we're going towards the deluxe edition anyway, because that seems to be what the people want."; TS3012c: "More than sixty percent of the people would like voice recognition."]
+- The body is rubber and the shape direction is two curves. [TS3012c: "Okay. Okay, so we're definitely going for rubber."; TS3012c: "I think with with the extras that we had there it's two curves I suppose."]
+- The target audience remains younger people, and changeable covers are a potential future extension rather than part of the basic design. [TS3012c: "We're definitely focussing on the younger people, 'cause that was our main goal."; TS3012c: "If we wanna expand our options, f be fashionable, then we can get changeable covers."]
+- The design should be distinct from competitors, with a yellow body and black buttons. [TS3012b: "I think it should be a little distinct from everything else"; TS3012c: "I would say take a yellow cover and black buttons."]
+- The power button belongs at the top, the menu controls should use triangle buttons, and buttons are generally square. [TS3012b: "I think the bu the power button should be on top"; TS3012c: "Yeah, the triangles would be best indeed."]
+- The scroll-wheel was rejected; the chosen energy setup is regular batteries rather than a charging base station. [TS3012c: "No r no scroll-wheel. Okay. Um I don't see anything missing really."; TS3012c: "Okay, will just take regular batteries."]
+
+What changed along the way:
+- The LCD moved from an early proposal to rejection over bulk and battery use in meeting b, then returned as the preferred deluxe design in meeting c. [TS3012b: "I think we should lose the L_C_D_ screen, like you said. I think for example it's it's huge"; TS3012c: "I think we're going towards the deluxe edition anyway, because that seems to be what the people want."]
+- Speech recognition was rejected in meeting b as immature, but meeting c reopened it after user-interest data supported considering it. [TS3012b: "It's a good idea, but it's just not I don't think the market's ripe for that yet"; TS3012c: "More than sixty percent of the people would like voice recognition."]
+- The power-button placement shifted from a central, protected proposal in meeting b to top placement. [TS3012b: "that thing should be central. You shouldn't be you uh shouldn't press it by accident"; TS3012b: "I think the bu the power button should be on top"]
+- Charging shifted from rechargeable-battery and TV-base proposals in meeting b to regular batteries in meeting c; the base station had been rejected as too costly. [TS3012b: "I think that will cost a lot. Uh a normal wire would be better."; TS3012c: "Okay, will just take regular batteries."]
+- The colour proposal shifted from the company-colour direction to yellow with black buttons in meeting c. [TS3012c: "I think we should go with uh with the company colour because what specific info"; TS3012c: "I would say take a yellow cover and black buttons."]
+
+Open actions and owners:
+- Speaker D (Marketing Expert) had promised to develop marketing ideas, and no later meeting reports that task completed. [TS3012a: "Um no, not really yet, but I've some ideas and I will"]
+- Speaker C (Industrial Designer) still needs to research financial feasibility of a rechargeable remote; later the team says finance information is still unavailable. [TS3012b: "Yes. I'm going to try to find that out. I'm not sure if there's information available on this, but"; TS3012c: "I have no I still don't have any finance information"]
+- Speaker D (Marketing Expert) still needs to find out whether users value rechargeable remotes enough to pay extra. [TS3012b: "I'm not sure, you should find out if it's if rechargeable is important."]
+- Speakers B (User Interface Designer) and C (Industrial Designer) must collaborate on the final internal and external design. [TS3012c: "you guys, you should work together on the final design, both on internal and external design."]
+- Speaker D (Marketing Expert) must analyze how the current design will perform in the market. [TS3012c: "you should probably find out how the product will fall into the market, how uh what's gonna happen with the final design as we have it now."]
+
+Disagreements still open:
+- The cost and feasibility of the LCD and voice-recognition direction remain unresolved because financial information was unavailable. [TS3012c: "So that's too bad. So then we'll just have to d uh have to go on, you know, the information that we have"; TS3012c: "More than sixty percent of the people would like voice recognition."]
+- Changeable covers were discussed as a fashionable option, but the team left them out of the basic design and only considered them for later. [TS3012c: "If we wanna expand our options, f be fashionable, then we can get changeable covers."; TS3012c: "it's not som not apparently that's not something we're working with in the basic design."]

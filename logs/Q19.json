@@ -1,0 +1,137 @@
+{
+  "question_id": "Q19",
+  "team": "IS1003",
+  "question": "Team IS1003 picked a natural material for the case and later changed it. What was the material, what replaced it, and who suggested the switch?",
+  "answer": "The team initially chose wood for its natural feel, then suggested changing the case from wood to plastic. Speaker B (User Interface Designer) suggested the switch.",
+  "citations": [
+    {
+      "meeting_id": "IS1003c",
+      "quote": "The feeling is natural, so maybe we can stay with wood."
+    },
+    {
+      "meeting_id": "IS1003d",
+      "quote": "I think you can transform the wood into plastic, maybe. Because uh it seems that this can be yeah, wood into plastic and it it should be fine."
+    }
+  ],
+  "dropped_citations": [],
+  "model": "gpt-6-luna",
+  "prompt_version": "a4",
+  "steps": 8,
+  "llm_rounds": 5,
+  "tokens_in": 32435,
+  "tokens_out": 395,
+  "cost_usd": 0.00344,
+  "seconds": 8.7,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "plan_searches",
+      "args": {
+        "parts": [
+          {
+            "part": "original natural case material",
+            "query": "natural material case"
+          },
+          {
+            "part": "replacement material",
+            "query": "case material replaced"
+          },
+          {
+            "part": "who suggested switching",
+            "query": "suggest switch material"
+          }
+        ]
+      },
+      "result_chars": 11370,
+      "result_preview": "=== Part: original natural case material  (search: 'natural material case')\n--- IS1003c turns #309-#318\n#309 D: 'Cause it's it's really what people want. Even if it's in general fashion, we want it to be in the remote control. And then uh if if we take the ordering or the ranking of all the points, "
+    },
+    {
+      "step": 2,
+      "tool": "list_meetings",
+      "args": {
+        "team": "IS1003"
+      },
+      "result_chars": 123,
+      "result_preview": "IS1003a (meeting a, 202 turns)\nIS1003b (meeting b, 309 turns)\nIS1003c (meeting c, 412 turns)\nIS1003d (meeting d, 682 turns)"
+    },
+    {
+      "step": 2,
+      "tool": "get_memory",
+      "args": {
+        "team": "IS1003",
+        "topic": "material"
+      },
+      "result_chars": 2481,
+      "result_preview": "Facts about 'material', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  replaced F2224 IS1003c #261 decision/proposed [case material] who=B: B proposes choosing between wooden or plastic remote control case materials.\n           evidence: \"which kind of materia"
+    },
+    {
+      "step": 2,
+      "tool": "get_roles",
+      "args": {
+        "team": "IS1003"
+      },
+      "result_chars": 231,
+      "result_preview": "Speaker A = Project Manager (said in IS1003a turn #4)\nSpeaker B = User Interface Designer (said in IS1003a turn #28)\nSpeaker C = Industrial Designer (said in IS1003a turn #25)\nSpeaker D = Marketing Expert (said in IS1003a turn #29)"
+    },
+    {
+      "step": 2,
+      "tool": "search",
+      "args": {
+        "team": "IS1003",
+        "query": "wood plastic rubber material case",
+        "meetings": [
+          "IS1003d"
+        ]
+      },
+      "result_chars": 8103,
+      "result_preview": "--- IS1003d turns #0-#29\n#0 B: Mm-hmm. So, ready?\n#1 D: No not really. Just\n#2 C: 'Kay.\n#3 D: Crap.\n#4 B: Sorry, I I um I'm afraid\n#5 D: Okay.\n#6 C: It's perfect.\n#7 A: Your judgement it's is biased.\n#8 B: Uh thi this remote control will stay a prototype.\n#9 D: 'Kay, so whe where is the remote contr"
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1003d",
+        "start_turn": 377,
+        "end_turn": 435
+      },
+      "result_chars": 1248,
+      "result_preview": "#377 A: So the case.\n#378 B: Is sh it\n#379 D: So we are all already nineteen.\n#380 B: Wooden.\n#381 A: Okay, just keep on going, just to have an idea.\n#382 C: The solar cell is too expensive.\n#383 D: Yeah.\n#384 B: Is Yes a wooden pl I and that's There's no wood, so plastic just only, I think.\n#385 A:"
+    },
+    {
+      "step": 4,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1003d",
+        "start_turn": 412,
+        "end_turn": 435
+      },
+      "result_chars": 1141,
+      "result_preview": "#412 A: Okay. Okay we I think we have problem.\n#413 B: L_C_ display, maybe. Interface.\n#414 A: I think we s if we keep on adding things so we have to\n#415 B: It's okay. fine.\n#416 D: Yeah w one of the m key point is solar cells.\n#417 A: Maybe if w t if suppose if we change and we g put just one?\n#41"
+    },
+    {
+      "step": 5,
+      "tool": "submit_answer",
+      "answer": "The team initially chose wood for its natural feel, then suggested changing the case from wood to plastic. Speaker B (User Interface Designer) suggested the switch.",
+      "parts": [
+        {
+          "part": "original natural case material",
+          "evidence": "IS1003c #344"
+        },
+        {
+          "part": "what replaced it",
+          "evidence": "IS1003d #431"
+        },
+        {
+          "part": "who suggested the switch",
+          "evidence": "IS1003d #431"
+        }
+      ],
+      "valid": 2,
+      "failures": [],
+      "repairs": [],
+      "role_problems": [],
+      "parts_not_found": [],
+      "outcome_check": []
+    }
+  ]
+}

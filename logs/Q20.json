@@ -1,0 +1,116 @@
+{
+  "question_id": "Q20",
+  "team": "ES2008",
+  "question": "Early on, a Team ES2008 member asked whether the remote should only have buttons for the television. Who said they would look into it, and what answer was reported back?",
+  "answer": "Speaker A (Project Manager) said they would look into it; the answer reported back in meeting b was that the remote would be just for television, not video or other devices. [ES2008a] [ES2008b]",
+  "citations": [
+    {
+      "meeting_id": "ES2008a",
+      "quote": "It's a good question. Um. I'll look into that."
+    },
+    {
+      "meeting_id": "ES2008b",
+      "quote": "whether this is going to be t for television, video, or etcetera. Just for television."
+    }
+  ],
+  "dropped_citations": [],
+  "model": "gpt-6-luna",
+  "prompt_version": "a4",
+  "steps": 7,
+  "llm_rounds": 5,
+  "tokens_in": 18436,
+  "tokens_out": 365,
+  "cost_usd": 0.00203,
+  "seconds": 9.1,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "plan_searches",
+      "args": {
+        "parts": [
+          {
+            "part": "who said they would look into whether the remote should only have television buttons",
+            "query": "only buttons television look into"
+          },
+          {
+            "part": "what answer was reported back",
+            "query": "reported back buttons television other devices"
+          }
+        ]
+      },
+      "result_chars": 7755,
+      "result_preview": "=== Part: who said they would look into whether the remote should only have television buttons  (search: 'only buttons television look into')\n--- ES2008a turns #65-#83\n#65 D: Mm-hmm.\n#66 A: Okay, so maybe have like one remote that has the main functions on, off, channel changing, volume, and another"
+    },
+    {
+      "step": 2,
+      "tool": "list_meetings",
+      "args": {
+        "team": "ES2008"
+      },
+      "result_chars": 123,
+      "result_preview": "ES2008a (meeting a, 117 turns)\nES2008b (meeting b, 330 turns)\nES2008c (meeting c, 305 turns)\nES2008d (meeting d, 595 turns)"
+    },
+    {
+      "step": 2,
+      "tool": "get_roles",
+      "args": {
+        "team": "ES2008"
+      },
+      "result_chars": 254,
+      "result_preview": "Speaker A = Project Manager (said in ES2008a turn #1)\nSpeaker B = Industrial Designer (said in ES2008a turn #8)\nSpeaker C = User Interface Designer (said in ES2008a turn #15)\nSpeaker D = Marketing Expert (deduced: the only role left; not stated directly)"
+    },
+    {
+      "step": 2,
+      "tool": "get_memory",
+      "args": {
+        "team": "ES2008",
+        "topic": "television"
+      },
+      "result_chars": 1043,
+      "result_preview": "Facts about 'television', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  replaced F918 ES2008a #70 decision/proposed [remote control target device] who=C,A,D,B: It is unclear whether the remote control will be for television only or include other devices.\n    "
+    },
+    {
+      "step": 3,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "ES2008b",
+        "start_turn": 118,
+        "end_turn": 133
+      },
+      "result_chars": 1235,
+      "result_preview": "#118 C: Yep, news headlines.\n#119 B: But if you ever see the T_V_ saying like go to page one sixty on Ceefax now, that's what they're talking about.\n#120 A: How?\n#121 D: Oh.\n#122 C: It's earl it's pretty old technology. It's like nineteen eighties.\n#123 A: Okay.\n#124 D: That explains a lot.\n#125 B: "
+    },
+    {
+      "step": 4,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "ES2008a",
+        "start_turn": 68,
+        "end_turn": 82
+      },
+      "result_chars": 735,
+      "result_preview": "#68 C: Yeah.\n#69 B: Right.\n#70 C: Can I ask, are we designing a remote control for a television only um, and if if this device is just to be used for the television\n#71 A: Good question.\n#72 C: would we even technically be possible to include video recorder functions on it?\n#73 A: I don't know that "
+    },
+    {
+      "step": 5,
+      "tool": "submit_answer",
+      "answer": "Speaker A (Project Manager) said they would look into it; the answer reported back in meeting b was that the remote would be just for television, not video or other devices. [ES2008a] [ES2008b]",
+      "parts": [
+        {
+          "part": "Who said they would look into it?",
+          "evidence": "ES2008a #76"
+        },
+        {
+          "part": "What answer was reported back?",
+          "evidence": "ES2008b #127"
+        }
+      ],
+      "valid": 2,
+      "failures": [],
+      "repairs": [],
+      "role_problems": [],
+      "parts_not_found": [],
+      "outcome_check": []
+    }
+  ]
+}
