@@ -14,10 +14,29 @@ one-page write-up and the video script at the end.
 | Honesty about failure (3 wrong answers, explained) | Phase 6 | todo |
 | Platform reasoning (framework, models, APIs, where they broke) | Decided: plain Python + OpenAI SDK, SQLite. Log breakages as they happen | in progress |
 
+### Scaling and production notes (collect here; goes into the write-up's "what would need to change")
+- **Vector search compares in plain Python.** Fine for one team's ~120 chunks
+  (milliseconds), too slow for millions of chunks without a filter. Production: a vector
+  index (pgvector with HNSW, or Pinecone) that finds nearest neighbours without
+  comparing every chunk.
+- **The team filter is what keeps search small.** Here it's "team"; in a real company
+  it would be project, participants or date range. Without some filter, cost and noise grow with the corpus.
+- **SQLite is one file on one machine.** Production: Postgres (+ pgvector) so many users and
+  workers can read and write at once.
+- **store.py rebuilds everything** (1 second for 138 meetings). Production: ingest each new
+  meeting incrementally as it arrives, through a queue.
+- **Embeddings run one batch at a time.** Production: parallel calls, or OpenAI's Batch API
+  (cheaper, slower). Vectors are cached by text hash, so nothing is ever paid for twice.
+- **Speaker letters, not names.** Production: real identities from the meeting tool or calendar.
+- **Not built, but needed for a real company:** access control (who may search which meetings),
+  privacy and retention of personal data, monitoring answer quality over time.
+
 ### Model vs code log (add a line every phase)
 - Parsing transcripts into turns: **code** (fixed format, regex is exact, free, repeatable)
 - Token counting, stats, missing-meeting check: **code**
 - Speaker-letter consistency check, keyword finder: **code** (fast regex scans; a human judges the results)
+- Building the database, chunking, keyword search, team filter: **code** (deterministic, free, ~1s for 138 meetings)
+- Turning number words into digits and L_C_D_ into LCD for search: **code** (fixed rules)
 - Writing our own test questions and answers: **human** (us, by reading), never the LLM, or we'd be grading the AI with the AI
 
 ## Phase 1: Data exploration (`src/explore.py`, plain code, no AI)
@@ -117,3 +136,68 @@ Rules we followed:
 What TS3012 tells us for the brief: LCD dropped in b, back in c, kept in d;
 kinetic energy rejected for regular batteries; scroll-wheel cut; rubber kept
 over the yellow colour when over budget; speech recognition dropped in d for cost.
+
+## Phase 2: Memory store and keyword search (`src/parse.py`, `src/store.py`, `src/search.py`, plain code)
+
+**What we built**
+- `data/memory.db` (SQLite, ~26 MB, rebuilt from the transcripts in ~1 second):
+  - `meetings`: team, letter, **ord** (a=1..d=4). The order is how the agent knows what's most recent.
+  - `turns`: 48,148 rows, **original text, never modified**. Source of truth for quotes.
+  - `chunks`: 4,196 groups of consecutive turns (~200 words, 2-turn overlap). Each remembers
+    `start_turn..end_turn`, so a search hit always leads back to exact single turns.
+  - `chunks_fts`: keyword index (SQLite FTS5, BM25 ranking, porter stemming so
+    "batteries" matches "battery").
+- `search.py`: the only door the agent uses: `search(query, team, meetings, k)`,
+  `get_turns(meeting, start, end)`, `list_meetings(team)`.
+
+**Design decisions**
+- **Two copies of the text.** Stored text is original (for quotes); a separate *search*
+  copy turns `L_C_D_` into `LCD` and spoken numbers into digits
+  ("fourteen point six" -> 14.6, "twelve and a half" -> 12.5), from the Phase 1b findings.
+- **Chunks never split a turn**, so every hit maps cleanly to whole turns for citing.
+- **Overlap of 2 turns** so a question and its answer split across a chunk boundary are still found together.
+- **Filter by team before ranking.** At 10,000 meetings the search only ranks one team's
+  ~120 chunks, not millions. In production the filter would be project, people or dates.
+- **One search interface.** The agent never touches SQL, so the store can be swapped
+  (pgvector, Pinecone) by changing `search.py` only.
+
+**First measurement** (`tests/eval_search.py`): send each test question *as written* to
+keyword search with the team filter, and check whether the top-k chunks contain the turns
+our citations come from.
+
+| | recall@5 | recall@10 | recall@20 |
+|---|---|---|---|
+| Keyword search, raw question | 40% | 53% | 67% |
+
+Why it misses (read from the failures):
+- **The question's words aren't the answer's words.** T04 asks about "case material";
+  the evidence says "rubber". Keyword search can't connect them.
+- **Generic words dilute the query** ("wanted", "changed", "came").
+- We did **not** tune stopwords against these 10 questions: that would be overfitting
+  to our own test set.
+
+Next: meaning-based search (embeddings) to catch "material" -> "rubber", combined with
+keyword search. And in Phase 4 the agent writes its own queries and searches several times.
+
+## Phase 2b: Embeddings and hybrid search (`src/embed.py`, `src/search.py`)
+
+- `embed.py` turns each chunk into an OpenAI embedding (`text-embedding-3-small`, 1,536
+  numbers), stored in a separate `data/vectors.db` keyed by a SHA-1 hash of model + text:
+  rebuilding memory.db never loses paid work, and identical text is never embedded twice.
+  Batches of 100, saved after each batch, resumable. Logs real tokens, cost and time.
+- `search.py` modes: `keyword` (BM25), `vector` (dot product = cosine, team filter first),
+  `hybrid` (default: top 30 of each merged with Reciprocal Rank Fusion, 1/(60+rank),
+  because BM25 and cosine scores are on different scales).
+- Falls back to keyword with a printed reason if embeddings are unavailable. A team with
+  no vectors at all raises an error instead of silently becoming keyword-only
+  (found on review: it would have made hybrid look no better than keyword).
+- **Model vs code:** the embedding model only turns text into numbers; ranking, filtering,
+  merging and fallback are code.
+
+| | recall@5 | recall@10 | recall@20 |
+|---|---|---|---|
+| keyword | 40% | 53% | 67% |
+| vector | TODO (run embed.py) | | |
+| hybrid | TODO | | |
+
+Embedding cost/time for 138 meetings: TODO (from embed.py output)
