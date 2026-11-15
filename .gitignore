@@ -16,3 +16,7 @@ data/cache/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Demo-page and ad-hoc runs (the logs for the 25 questions, tests and brief are kept)
+logs/web-*.json
+logs/adhoc.json

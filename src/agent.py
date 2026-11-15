@@ -22,6 +22,7 @@ guardrails and the step limit, and has the final say on every quote.
 
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -32,11 +33,10 @@ from openai import OpenAI
 from extract import repair_evidence
 from parse import ROOT, TRANSCRIPTS_DIR, parse_turns
 from prompts import AGENT_PROMPT_VERSION, AGENT_SYSTEM, agent_user_message
-import re
-
 from memory import get_memory
 from tools import TOOL_SPECS, get_roles, run_tool
 from verify import check_citation
+
 # Checks added after the first run on Catalist's 25 questions (Q16 came back with no citations and
 # turn numbers in the text, Q25 had 4 sentences, 9 answers cited a single meeting).
 

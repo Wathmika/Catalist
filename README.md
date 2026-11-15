@@ -3,10 +3,18 @@
 An agent that turns 138 meeting transcripts (AMI corpus) into memory it can query, answers
 questions with exact, code-verified citations, and writes a pre-meeting brief.
 
-- `answers.json`: Catalist's 25 questions + the TS3012 brief, produced by the agent
-- `WRITEUP.md`: one-page write-up (architecture, model vs code, proof, failures, where it broke, production)
-- `architecture.drawio`: the architecture diagram (open in draw.io / diagrams.net)
-- `NOTES.md`: full build log with every measurement and decision
+## Deliverables
+
+| Asked for | Where it is |
+|---|---|
+| Code + README on how to run it | this repo (`src/`, `tests/`, this file) |
+| Answers to the 25 questions + TS3012 brief | `answers.json` (brief also in `brief_TS3012.md`) |
+| One-page write-up | submitted as a PDF (`WRITEUP.md` is a Markdown version) |
+| Architecture diagram | `build_test.png` (shown below) |
+| 3-5 min walkthrough | video link submitted separately |
+| Build log (extra) | `NOTES.md`: every measurement and decision |
+
+![Architecture](build_test.png)
 
 ## How it works
 
