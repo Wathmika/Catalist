@@ -678,3 +678,13 @@ Laptop agent.py had been reverted again (lost the T04 fix) -> restored with mode
   existing answers.json without model calls (deterministic, same function).
 - Brief (luna): 36 citations valid, none from d. Open disagreement now = missing finance info (the real one).
   Still lists C's rechargeable research as open although c ruled the rechargeable unit out.
+
+## Phase 8: Demo page, diagram, short write-up
+- src/web.py: local demo page, standard library only (no new installs; safe on Python 3.15). Ask tab: team
+  picker, example questions, steps streamed live (agent.answer_question(on_step=...)), answer with citations,
+  tool calls / tokens / cost / time. Brief tab renders brief_TS3012.md. Binds to 127.0.0.1 only.
+  agent.py now also logs "code check -> sent back: ..." so the repair loop is visible (terminal and page).
+  Tested here with a scripted fake model: steps stream, memory check fires, marker stripped, bad team -> 400.
+- architecture.drawio: ingest lane (once per meeting) and answer lane (per question, team-filtered), colour legend
+  code / LLM / embeddings / checks / storage / outputs.
+- WRITEUP.md shortened to ~650 words (key decisions only); long version's content lives in this file.

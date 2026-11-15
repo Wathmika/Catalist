@@ -1,0 +1,197 @@
+{
+  "question_id": "web-111558",
+  "team": "IS1004",
+  "question": "Why did the team decide against speech recognition, and what did the final remote have instead?",
+  "answer": "They ruled out speech recognition because TV background noise could make it harder to recognize speech, and Speaker A (Project Manager) was not confident they could deliver a product that worked. The final remote instead had two scroll wheels—one for volume and one for channels—and a turbo button.",
+  "citations": [
+    {
+      "meeting_id": "IS1004b",
+      "quote": "You might have some background noise from the T_V_ which will make the speech recognition much uh harder"
+    },
+    {
+      "meeting_id": "IS1004d",
+      "quote": "We've got the two uh uh scroll wheels here which you know one on the the left for the uh volume and the one on the right for for the channel and uh underneath we have the uh the turbo button"
+    }
+  ],
+  "dropped_citations": [],
+  "model": "gpt-6-luna",
+  "prompt_version": "a4",
+  "steps": 15,
+  "llm_rounds": 7,
+  "tokens_in": 92105,
+  "tokens_out": 616,
+  "cost_usd": 0.00952,
+  "seconds": 19.0,
+  "trace": [
+    {
+      "step": 1,
+      "tool": "plan_searches",
+      "args": {
+        "parts": [
+          {
+            "part": "Why they decided against speech recognition",
+            "query": "speech recognition rejected why"
+          },
+          {
+            "part": "What the final remote had instead",
+            "query": "final remote instead buttons interface"
+          }
+        ]
+      },
+      "result_chars": 7678,
+      "result_preview": "=== Part: Why they decided against speech recognition  (search: 'speech recognition rejected why')\n--- IS1004b turns #102-#107\n#102 A: Excellent. So we have also to focus more on the internet aspects because well well te teletext is outdated now and uh finally, it should be clear that the corporate "
+    },
+    {
+      "step": 2,
+      "tool": "get_memory",
+      "args": {
+        "team": "IS1004",
+        "topic": "speech"
+      },
+      "result_chars": 1955,
+      "result_preview": "Facts about 'speech', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  CURRENT  F2147 IS1004b #156 number/stated [speech recognition accuracy] who=C [95 %]: Speech recognition system can target 95 to 97 percent accuracy.\n           evidence: \"we can target ninet"
+    },
+    {
+      "step": 2,
+      "tool": "get_memory",
+      "args": {
+        "team": "IS1004",
+        "topic": "remote"
+      },
+      "result_chars": 10243,
+      "result_preview": "Facts about 'remote', oldest first (CURRENT = latest on that topic):\n== (all matching facts, oldest first)\n  CURRENT  F2001 IS1004a #8 decision/agreed [project goal] who=A: The project goal is to develop an original, trendy, and user-friendly remote control.\n           evidence: \"the goal of this pr"
+    },
+    {
+      "step": 2,
+      "tool": "list_meetings",
+      "args": {
+        "team": "IS1004"
+      },
+      "result_chars": 122,
+      "result_preview": "IS1004a (meeting a, 51 turns)\nIS1004b (meeting b, 253 turns)\nIS1004c (meeting c, 420 turns)\nIS1004d (meeting d, 535 turns)"
+    },
+    {
+      "step": 2,
+      "tool": "get_roles",
+      "args": {
+        "team": "IS1004"
+      },
+      "result_chars": 228,
+      "result_preview": "Speaker A = Project Manager (said in IS1004a turn #3)\nSpeaker B = User Interface Designer (said in IS1004a turn #4)\nSpeaker C = Industrial Designer (said in IS1004a turn #7)\nSpeaker D = Marketing Expert (said in IS1004a turn #6)"
+    },
+    {
+      "step": 2,
+      "tool": "search",
+      "args": {
+        "team": "IS1004",
+        "query": "final buttons remote control chosen"
+      },
+      "result_chars": 9503,
+      "result_preview": "--- IS1004b turns #121-#126\n#121 C: Change the channels. Yeah.\n#122 B: uh the I think that a scroll wheel is actually pretty a pretty handy way of of changing the channel. 'Cause I know when I um when I use the remote to change the channel I very rarely use the numbers on the on the pad. I usually u"
+    },
+    {
+      "step": 2,
+      "tool": "search",
+      "args": {
+        "team": "IS1004",
+        "query": "speech background noise microphone cost price"
+      },
+      "result_chars": 7404,
+      "result_preview": "--- IS1004b turns #102-#107\n#102 A: Excellent. So we have also to focus more on the internet aspects because well well te teletext is outdated now and uh finally, it should be clear that the corporate image, that means colours and logos of the co our company should be clearly inde identified in the "
+    },
+    {
+      "step": 3,
+      "tool": "search",
+      "args": {
+        "team": "IS1004",
+        "query": "we don't go for speech recognition technology"
+      },
+      "result_chars": 8113,
+      "result_preview": "--- IS1004b turns #141-#148\n#141 A: Okay. Okay. Okay, thanks. you want to go?\n#142 C: Yep. So yeah. So most of the things which we are discussing about is speech recognition uh, that means on my own I yeah, it should be.\n#143 A: This one? Great. No, not that one. you are two.\n#144 C: Two.\n#145 A: Al"
+    },
+    {
+      "step": 3,
+      "tool": "search",
+      "args": {
+        "team": "IS1004",
+        "query": "TV background noise speech recognition harder"
+      },
+      "result_chars": 7579,
+      "result_preview": "--- IS1004b turns #102-#107\n#102 A: Excellent. So we have also to focus more on the internet aspects because well well te teletext is outdated now and uh finally, it should be clear that the corporate image, that means colours and logos of the co our company should be clearly inde identified in the "
+    },
+    {
+      "step": 3,
+      "tool": "search",
+      "args": {
+        "team": "IS1004",
+        "query": "two scroll wheels turbo button final remote banana"
+      },
+      "result_chars": 7426,
+      "result_preview": "--- IS1004c turns #140-#152\n#140 A: Okay.\n#141 B: Um, yeah. So if we can just move on to the next slide, I've just done a quick mock-up of uh uh some of the features of our potential funky-looking uh remote control\n#142 A: It doesn't look like a banana at all.\n#143 B: Well, you see, I was I was unaw"
+    },
+    {
+      "step": 3,
+      "tool": "search",
+      "args": {
+        "team": "IS1004",
+        "query": "No LCD no speech recognition remote"
+      },
+      "result_chars": 8356,
+      "result_preview": "--- IS1004b turns #102-#107\n#102 A: Excellent. So we have also to focus more on the internet aspects because well well te teletext is outdated now and uh finally, it should be clear that the corporate image, that means colours and logos of the co our company should be clearly inde identified in the "
+    },
+    {
+      "step": 4,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004b",
+        "start_turn": 104,
+        "end_turn": 107
+      },
+      "result_chars": 616,
+      "result_preview": "#104 A: So Yeah yeah. Sure sure. So maybe we can jump to your presentations, right now. Okay so let's keep in mind about tha that that this last point about L_C_D_ and speech uh reco\n#105 B: Yep. Okay. Yeah. I think even even if it was within budget do a speech reco rec system it might be a bit diff"
+    },
+    {
+      "step": 5,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004b",
+        "start_turn": 233,
+        "end_turn": 243
+      },
+      "result_chars": 1614,
+      "result_preview": "#233 A: So the com the um the uh the committment is the following, we don't go for speech recognition technology. The L_C_D_ is still on disc is still open to discussion. It is up to you to go through this um uh this way and to to report report me back next meeting. So\n#234 C: Mm-hmm.\n#235 D: I thin"
+    },
+    {
+      "step": 6,
+      "tool": "read_turns",
+      "args": {
+        "meeting_id": "IS1004d",
+        "start_turn": 5,
+        "end_turn": 20
+      },
+      "result_chars": 1661,
+      "result_preview": "#5 C: So final design. Final design. Okay so Michael you can go ahead.\n#6 B: Yeah so uh following our decision to uh make a yellow well to make a banana\n#7 A: Yeah can you show it to the the camera maybe.\n#8 B: remote okay so we actually have a\n#9 C: You can pull it out first, maybe.\n#10 B: We've we"
+    },
+    {
+      "step": 7,
+      "tool": "submit_answer",
+      "answer": "They ruled out speech recognition because TV background noise could make it harder to recognize speech, and Speaker A (Project Manager) was not confident they could deliver a product that worked. The final remote instead had two scroll wheels—one for volume and one for channels—and a turbo button.",
+      "parts": [
+        {
+          "part": "Why they decided against speech recognition",
+          "evidence": "IS1004b #105-#107; IS1004b #243"
+        },
+        {
+          "part": "What the final remote had instead",
+          "evidence": "IS1004d #12"
+        }
+      ],
+      "valid": 2,
+      "failures": [],
+      "repairs": [],
+      "role_problems": [],
+      "parts_not_found": [],
+      "outcome_check": []
+    }
+  ]
+}

@@ -4,7 +4,8 @@ An agent that turns 138 meeting transcripts (AMI corpus) into memory it can quer
 questions with exact, code-verified citations, and writes a pre-meeting brief.
 
 - `answers.json`: Catalist's 25 questions + the TS3012 brief, produced by the agent
-- `WRITEUP.md`: one-page write-up (architecture, model vs code, where it broke, production)
+- `WRITEUP.md`: one-page write-up (architecture, model vs code, proof, failures, where it broke, production)
+- `architecture.drawio`: the architecture diagram (open in draw.io / diagrams.net)
 - `NOTES.md`: full build log with every measurement and decision
 
 ## How it works
@@ -57,7 +58,12 @@ gpt-4.1-mini; the agent and brief use gpt-6-luna (set `AGENT_MODEL=gpt-4.1-mini`
 environment to compare). `python src/run_questions.py --clean` re-applies the answer clean-up
 to an existing answers.json without calling any model.
 
-Ask anything:
+Demo page (live steps, answer with citations, the brief):
+```
+python src/web.py        then open http://127.0.0.1:8000
+```
+
+Ask anything in the terminal:
 ```
 python src/agent.py TS3012 "What case material did they choose and why?"
 ```
@@ -97,5 +103,6 @@ reading the transcripts; all 48 citations are code-verified. Key-fact scores com
 | `src/extract.py`, `src/memory.py` | memory extraction, timelines and "what is current" |
 | `src/tools.py`, `src/verify.py`, `src/agent.py` | the agent: tools, citation checks, loop |
 | `src/run_questions.py`, `src/brief.py` | answers.json |
+| `src/web.py` | local demo page (standard library only) |
 
 Data: AMI Meeting Corpus (University of Edinburgh and partners), CC BY 4.0.

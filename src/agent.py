@@ -244,7 +244,9 @@ def salvage_quotes(answer: str, team: str, up_to_meeting: str | None) -> tuple[l
 def answer_question(question: str, team: str, qid: str = "adhoc", model: str | None = None,
                     up_to_meeting: str | None = None, system: str = AGENT_SYSTEM,
                     user_message: str | None = None, verbose: bool = True,
-                    plan_first: bool = True) -> dict:
+                    plan_first: bool = True, on_step=None) -> dict:
+    """on_step: optional function called with each progress line (used by src/web.py to show
+    the steps live in the browser)."""
     model = model or MODEL
     tools = [PLAN_TOOL] + TOOL_SPECS if plan_first else TOOL_SPECS
     outcome_checked = False
@@ -253,7 +255,11 @@ def answer_question(question: str, team: str, qid: str = "adhoc", model: str | N
                 {"role": "user", "content": user_message or agent_user_message(question, team)}]
     trace, tokens_in, tokens_out, fix_rounds = [], 0, 0, 0
     final, t0 = None, time.time()
-    log = (lambda s: print(f"  [{qid}] {s}")) if verbose else (lambda s: None)
+    def log(s: str) -> None:
+        if verbose:
+            print(f"  [{qid}] {s}")
+        if on_step:
+            on_step(s)
 
     for step in range(1, MAX_STEPS + 2):
         last = step > MAX_STEPS
@@ -358,6 +364,8 @@ def answer_question(question: str, team: str, qid: str = "adhoc", model: str | N
             limit = MAX_FIX_ROUNDS + (1 if not good else 0)
             if problems and fix_rounds < limit and not last:
                 fix_rounds += 1
+                log(f"step {step}: code check -> sent back: "
+                    + " | ".join(p.split("\n")[0][:80] for p in problems))
                 messages.append({"role": "tool", "tool_call_id": call.id, "content":
                                  "Not accepted yet.\n" + "\n".join(problems)
                                  + "\nFix this, then call submit_answer again with the full answer and all citations."})
